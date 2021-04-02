@@ -23,9 +23,31 @@ margin_top = 146.0
 margin_right = 521.0
 margin_bottom = 160.0
 rect_scale = Vector2( 2, 2 )
-text = "Frase da indovinare"
+text = "nome da indovinare"
 align = 1
 uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="btn_reset" type="Button" parent="."]
+margin_left = 486.9
+margin_top = 23.7841
+margin_right = 539.9
+margin_bottom = 64.7841
+text = "Reset"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_a" type="Button" parent="."]
+margin_left = 466.169
+margin_top = 363.897
+margin_right = 511.169
+margin_bottom = 404.897
+text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="btn_reset" to="." method="_on_btn_reset_pressed"]
+[connection signal="pressed" from="btn_a" to="." method="_on_btn_a_pressed"]
