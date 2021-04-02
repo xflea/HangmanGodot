@@ -30,6 +30,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="label_da_togliere" type="Label" parent="."]
+margin_left = 66.0
+margin_top = 278.0
+margin_right = 130.0
+margin_bottom = 309.0
+rect_scale = Vector2( 2, 2 )
+text = "x = +60
+y = + 60"
+align = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label_errori" type="Label" parent="."]
+margin_left = 69.0526
+margin_top = 204.0
+margin_right = 128.053
+margin_bottom = 218.0
+rect_scale = Vector2( 2, 2 )
+text = "errori"
+align = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="btn_reset" type="Button" parent="."]
 margin_left = 486.9
 margin_top = 23.7841
@@ -41,13 +68,134 @@ __meta__ = {
 }
 
 [node name="btn_a" type="Button" parent="."]
-margin_left = 466.169
-margin_top = 363.897
-margin_right = 511.169
-margin_bottom = 404.897
+margin_left = 80.0
+margin_top = 420.0
+margin_right = 125.0
+margin_bottom = 461.0
 text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_q" type="Button" parent="."]
+margin_left = 50.0
+margin_top = 360.0
+margin_right = 95.0
+margin_bottom = 401.0
+text = "Q"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_w" type="Button" parent="."]
+margin_left = 110.0
+margin_top = 360.0
+margin_right = 155.0
+margin_bottom = 401.0
+text = "W"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_e" type="Button" parent="."]
+margin_left = 170.0
+margin_top = 360.0
+margin_right = 215.0
+margin_bottom = 401.0
+text = "E"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_r" type="Button" parent="."]
+margin_left = 230.0
+margin_top = 360.0
+margin_right = 275.0
+margin_bottom = 401.0
+text = "R"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_t" type="Button" parent="."]
+margin_left = 290.0
+margin_top = 360.0
+margin_right = 335.0
+margin_bottom = 401.0
+text = "T"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_y" type="Button" parent="."]
+margin_left = 350.0
+margin_top = 360.0
+margin_right = 395.0
+margin_bottom = 401.0
+text = "Y"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_u" type="Button" parent="."]
+margin_left = 410.0
+margin_top = 360.0
+margin_right = 455.0
+margin_bottom = 401.0
+text = "U"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_i" type="Button" parent="."]
+margin_left = 470.0
+margin_top = 360.0
+margin_right = 515.0
+margin_bottom = 401.0
+text = "I"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_o" type="Button" parent="."]
+margin_left = 530.0
+margin_top = 360.0
+margin_right = 575.0
+margin_bottom = 401.0
+text = "O"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_p" type="Button" parent="."]
+margin_left = 590.0
+margin_top = 360.0
+margin_right = 635.0
+margin_bottom = 401.0
+text = "P"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_b" type="Button" parent="."]
+margin_left = 361.356
+margin_top = 514.926
+margin_right = 406.356
+margin_bottom = 555.926
+text = "B"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="btn_reset" to="." method="_on_btn_reset_pressed"]
 [connection signal="pressed" from="btn_a" to="." method="_on_btn_a_pressed"]
+[connection signal="pressed" from="btn_q" to="." method="_on_btn_q_pressed"]
+[connection signal="pressed" from="btn_w" to="." method="_on_btn_w_pressed"]
+[connection signal="pressed" from="btn_e" to="." method="_on_btn_e_pressed"]
+[connection signal="pressed" from="btn_r" to="." method="_on_btn_r_pressed"]
+[connection signal="pressed" from="btn_t" to="." method="_on_btn_t_pressed"]
+[connection signal="pressed" from="btn_y" to="." method="_on_btn_y_pressed"]
+[connection signal="pressed" from="btn_u" to="." method="_on_btn_u_pressed"]
+[connection signal="pressed" from="btn_i" to="." method="_on_btn_i_pressed"]
+[connection signal="pressed" from="btn_o" to="." method="_on_btn_o_pressed"]
+[connection signal="pressed" from="btn_p" to="." method="_on_btn_p_pressed"]
+[connection signal="pressed" from="btn_b" to="." method="_on_btn_b_pressed"]

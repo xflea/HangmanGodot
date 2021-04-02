@@ -44,6 +44,7 @@ func estrai(array):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	get_node("label_da_indovinare").text = estratta_a_schermo
+	get_node("label_errori").text = String(errori) + "/" + String(max_errori)
 
 func controlla_lettera(lettera):
 	lettera = String(lettera)
@@ -52,7 +53,9 @@ func controlla_lettera(lettera):
 		lettere_indovinate.append(lettera)
 	else:
 		errori += 1
-
+		var nome_immagine = "res://images/hangman/" + String(errori) + ".png"
+		var immagine_da_mettere = load(nome_immagine)
+		get_node("img_impiccato").texture = immagine_da_mettere
 
 # tutti bottoni da qui sotto
 
@@ -62,3 +65,47 @@ func _on_btn_reset_pressed():
 func _on_btn_a_pressed():
 	get_node("btn_a").disabled = true
 	controlla_lettera("a")
+
+func _on_btn_b_pressed():
+	get_node("btn_b").disabled = true
+	controlla_lettera("b")
+
+func _on_btn_q_pressed():
+	get_node("btn_q").disabled = true
+	controlla_lettera("q")
+
+func _on_btn_w_pressed():
+	get_node("btn_w").disabled = true
+	controlla_lettera("w")
+
+func _on_btn_e_pressed():
+	get_node("btn_e").disabled = true
+	controlla_lettera("e")
+
+func _on_btn_r_pressed():
+	get_node("btn_r").disabled = true
+	controlla_lettera("r")
+
+func _on_btn_t_pressed():
+	get_node("btn_t").disabled = true
+	controlla_lettera("t")
+
+func _on_btn_y_pressed():
+	get_node("btn_y").disabled = true
+	controlla_lettera("y")
+
+func _on_btn_u_pressed():
+	get_node("btn_u").disabled = true
+	controlla_lettera("u")
+
+func _on_btn_i_pressed():
+	get_node("btn_i").disabled = true
+	controlla_lettera("i")
+
+func _on_btn_o_pressed():
+	get_node("btn_o").disabled = true
+	controlla_lettera("o")
+
+func _on_btn_p_pressed():
+	get_node("btn_p").disabled = true
+	controlla_lettera("p")
