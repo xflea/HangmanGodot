@@ -30,27 +30,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="label_da_togliere" type="Label" parent="."]
-margin_left = 66.0
-margin_top = 278.0
-margin_right = 130.0
-margin_bottom = 309.0
-rect_scale = Vector2( 2, 2 )
-text = "x = +60
-y = + 60"
-align = 1
-uppercase = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="label_errori" type="Label" parent="."]
 margin_left = 69.0526
 margin_top = 204.0
 margin_right = 128.053
 margin_bottom = 218.0
 rect_scale = Vector2( 2, 2 )
-text = "errori"
+text = "0/5"
 align = 1
 uppercase = true
 __meta__ = {
@@ -73,6 +59,126 @@ margin_top = 420.0
 margin_right = 125.0
 margin_bottom = 461.0
 text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_s" type="Button" parent="."]
+margin_left = 140.0
+margin_top = 420.0
+margin_right = 185.0
+margin_bottom = 461.0
+text = "S"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_d" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 420.0
+margin_right = 245.0
+margin_bottom = 461.0
+text = "D"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_f" type="Button" parent="."]
+margin_left = 258.811
+margin_top = 420.0
+margin_right = 303.811
+margin_bottom = 461.0
+text = "F"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_g" type="Button" parent="."]
+margin_left = 320.0
+margin_top = 420.0
+margin_right = 365.0
+margin_bottom = 461.0
+text = "G"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_h" type="Button" parent="."]
+margin_left = 380.0
+margin_top = 418.811
+margin_right = 425.0
+margin_bottom = 459.811
+text = "H"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_j" type="Button" parent="."]
+margin_left = 440.0
+margin_top = 420.0
+margin_right = 485.0
+margin_bottom = 461.0
+text = "J"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_k" type="Button" parent="."]
+margin_left = 500.0
+margin_top = 420.0
+margin_right = 545.0
+margin_bottom = 461.0
+text = "K"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_l" type="Button" parent="."]
+margin_left = 560.0
+margin_top = 420.0
+margin_right = 605.0
+margin_bottom = 461.0
+text = "L"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_z" type="Button" parent="."]
+margin_left = 110.0
+margin_top = 480.0
+margin_right = 155.0
+margin_bottom = 521.0
+text = "Z"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_x" type="Button" parent="."]
+margin_left = 170.0
+margin_top = 480.0
+margin_right = 215.0
+margin_bottom = 521.0
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_c" type="Button" parent="."]
+margin_left = 230.0
+margin_top = 480.0
+margin_right = 275.0
+margin_bottom = 521.0
+text = "C"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_v" type="Button" parent="."]
+margin_left = 290.0
+margin_top = 480.0
+margin_right = 335.0
+margin_bottom = 521.0
+text = "V"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -178,16 +284,138 @@ __meta__ = {
 }
 
 [node name="btn_b" type="Button" parent="."]
-margin_left = 361.356
-margin_top = 514.926
-margin_right = 406.356
-margin_bottom = 555.926
+margin_left = 350.0
+margin_top = 480.0
+margin_right = 395.0
+margin_bottom = 521.0
 text = "B"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_n" type="Button" parent="."]
+margin_left = 410.0
+margin_top = 480.0
+margin_right = 455.0
+margin_bottom = 521.0
+text = "N"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_m" type="Button" parent="."]
+margin_left = 470.0
+margin_top = 480.0
+margin_right = 515.0
+margin_bottom = 521.0
+text = "M"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_1" type="Button" parent="."]
+margin_left = 730.0
+margin_top = 480.0
+margin_right = 775.0
+margin_bottom = 521.0
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_2" type="Button" parent="."]
+margin_left = 790.0
+margin_top = 480.0
+margin_right = 835.0
+margin_bottom = 521.0
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_3" type="Button" parent="."]
+margin_left = 850.0
+margin_top = 480.0
+margin_right = 895.0
+margin_bottom = 521.0
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_4" type="Button" parent="."]
+margin_left = 730.0
+margin_top = 420.0
+margin_right = 775.0
+margin_bottom = 461.0
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_5" type="Button" parent="."]
+margin_left = 790.0
+margin_top = 420.0
+margin_right = 835.0
+margin_bottom = 461.0
+text = "5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_6" type="Button" parent="."]
+margin_left = 850.0
+margin_top = 420.0
+margin_right = 895.0
+margin_bottom = 461.0
+text = "6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_7" type="Button" parent="."]
+margin_left = 730.0
+margin_top = 360.0
+margin_right = 775.0
+margin_bottom = 401.0
+text = "7"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_8" type="Button" parent="."]
+margin_left = 790.0
+margin_top = 360.0
+margin_right = 835.0
+margin_bottom = 401.0
+text = "8"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_9" type="Button" parent="."]
+margin_left = 850.0
+margin_top = 360.0
+margin_right = 895.0
+margin_bottom = 401.0
+text = "9"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="btn_reset" to="." method="_on_btn_reset_pressed"]
 [connection signal="pressed" from="btn_a" to="." method="_on_btn_a_pressed"]
+[connection signal="pressed" from="btn_s" to="." method="_on_btn_s_pressed"]
+[connection signal="pressed" from="btn_d" to="." method="_on_btn_d_pressed"]
+[connection signal="pressed" from="btn_f" to="." method="_on_btn_f_pressed"]
+[connection signal="pressed" from="btn_g" to="." method="_on_btn_g_pressed"]
+[connection signal="pressed" from="btn_h" to="." method="_on_btn_h_pressed"]
+[connection signal="pressed" from="btn_j" to="." method="_on_btn_j_pressed"]
+[connection signal="pressed" from="btn_k" to="." method="_on_btn_k_pressed"]
+[connection signal="pressed" from="btn_l" to="." method="_on_btn_l_pressed"]
+[connection signal="pressed" from="btn_z" to="." method="_on_btn_z_pressed"]
+[connection signal="pressed" from="btn_x" to="." method="_on_btn_x_pressed"]
+[connection signal="pressed" from="btn_c" to="." method="_on_btn_c_pressed"]
+[connection signal="pressed" from="btn_v" to="." method="_on_btn_v_pressed"]
 [connection signal="pressed" from="btn_q" to="." method="_on_btn_q_pressed"]
 [connection signal="pressed" from="btn_w" to="." method="_on_btn_w_pressed"]
 [connection signal="pressed" from="btn_e" to="." method="_on_btn_e_pressed"]
@@ -199,3 +427,14 @@ __meta__ = {
 [connection signal="pressed" from="btn_o" to="." method="_on_btn_o_pressed"]
 [connection signal="pressed" from="btn_p" to="." method="_on_btn_p_pressed"]
 [connection signal="pressed" from="btn_b" to="." method="_on_btn_b_pressed"]
+[connection signal="pressed" from="btn_n" to="." method="_on_btn_n_pressed"]
+[connection signal="pressed" from="btn_m" to="." method="_on_btn_m_pressed"]
+[connection signal="pressed" from="btn_1" to="." method="_on_btn_1_pressed"]
+[connection signal="pressed" from="btn_2" to="." method="_on_btn_2_pressed"]
+[connection signal="pressed" from="btn_3" to="." method="_on_btn_3_pressed"]
+[connection signal="pressed" from="btn_4" to="." method="_on_btn_4_pressed"]
+[connection signal="pressed" from="btn_5" to="." method="_on_btn_5_pressed"]
+[connection signal="pressed" from="btn_6" to="." method="_on_btn_6_pressed"]
+[connection signal="pressed" from="btn_7" to="." method="_on_btn_7_pressed"]
+[connection signal="pressed" from="btn_8" to="." method="_on_btn_8_pressed"]
+[connection signal="pressed" from="btn_9" to="." method="_on_btn_9_pressed"]
