@@ -23,8 +23,10 @@ func _ready():
 	
 	for lettera in estratta:
 		if lettera == "_":
-			estratta_a_schermo += " "
+			estratta_a_schermo += "    "
 		estratta_a_schermo += "_ "
+	
+	get_node("label_da_indovinare").text = estratta_a_schermo
 
 
 func estrai(array):
@@ -41,13 +43,26 @@ func estrai(array):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	get_node("label_da_indovinare").text = estratta_a_schermo
+	pass
 
 func controlla_lettera(lettera):
+	estratta_a_schermo = ""
 	lettera = String(lettera)
 	if lettere_da_indovinare.has(lettera):
 		lettere_da_indovinare.erase(lettera)
 		lettere_indovinate.append(lettera)
+		
+		for let in self.estratta:
+			if lettere_indovinate.has(String(let)) and let != "_":
+				estratta_a_schermo += let + " "
+			else:
+				if let == "_":
+					estratta_a_schermo += "    "
+				else:
+					estratta_a_schermo += "_ "
+		
+		get_node("label_da_indovinare").text = estratta_a_schermo
+		
 		if lettere_da_indovinare.empty():
 			gioco_finito = true
 			get_node("label_errori").text = "EVVIVA!!!"
