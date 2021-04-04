@@ -1,11 +1,11 @@
 extends Node2D
 
-
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
-var nomi_da_estrarre = ['dario_moccia', 'panetty']
+var nomi_da_estrarre = ['dario_moccia', 'panetty', 'alessandro_nannipieri', 'davide_masella', 'dada', 'agnese_innocente',
+'mangaka96', 'giovanni_ballerini', 'sdrumox', 'marco_merrino']
 var lettere_da_indovinare = []
 var lettere_indovinate = []
 
@@ -27,6 +27,7 @@ func _ready():
 		estratta_a_schermo += "_ "
 	
 	get_node("label_da_indovinare").text = estratta_a_schermo
+	get_node("label_pool").text = "N° di personaggi disponibili: " + String(nomi_da_estrarre.size())
 
 
 func estrai(array):
@@ -69,6 +70,7 @@ func controlla_lettera(lettera):
 			var nome_immagine = "res://images/sol/" + String(self.estratta) + ".png"
 			var immagine_da_mettere = load(nome_immagine)
 			get_node("img_da_indovinare").texture = immagine_da_mettere
+			get_node("btn_reset").visible = true
 
 	else:
 		errori += 1
@@ -81,6 +83,7 @@ func controlla_lettera(lettera):
 			gioco_finito = true
 			get_node("label_errori").text = "GAME OVER"
 			get_node("img_impiccato").texture = load("res://images/hangman/6.png")
+			get_node("btn_reset").visible = true
 
 # tutti bottoni da qui sotto
 

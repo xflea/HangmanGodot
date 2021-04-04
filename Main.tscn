@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://images/hangman/0.png" type="Texture" id=2]
 [ext_resource path="res://images/dunno.png" type="Texture" id=3]
+[ext_resource path="res://images/wall.png" type="Texture" id=4]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -43,12 +44,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="label_pool" type="Label" parent="."]
+margin_left = 13.1598
+margin_top = 577.411
+margin_right = 197.16
+margin_bottom = 591.411
+text = "N° di personaggi disponibili: "
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="btn_reset" type="Button" parent="."]
+visible = false
 margin_left = 486.9
 margin_top = 23.7841
 margin_right = 539.9
 margin_bottom = 64.7841
-text = "Reset"
+text = "Nuova Partita"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -402,6 +415,12 @@ text = "9"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.784314 )
+position = Vector2( 500, 300 )
+z_index = -1
+texture = ExtResource( 4 )
 [connection signal="pressed" from="btn_reset" to="." method="_on_btn_reset_pressed"]
 [connection signal="pressed" from="btn_a" to="." method="_on_btn_a_pressed"]
 [connection signal="pressed" from="btn_s" to="." method="_on_btn_s_pressed"]
