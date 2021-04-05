@@ -1,7 +1,20 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://images/wall.png" type="Texture" id=2]
+[ext_resource path="res://New Super Mario Font U.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 31
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 21
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
 
 [node name="Menu" type="Node2D"]
 script = ExtResource( 1 )
@@ -23,21 +36,23 @@ __meta__ = {
 }
 
 [node name="titolo" type="Label" parent="."]
-margin_left = 686.173
-margin_top = 58.2712
-margin_right = 746.173
-margin_bottom = 72.2712
+margin_left = 625.523
+margin_top = 52.3251
+margin_right = 762.523
+margin_bottom = 85.3251
 rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Hangman"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="coded_by" type="Label" parent="."]
-margin_left = 909.744
-margin_top = 576.766
-margin_right = 1014.74
-margin_bottom = 590.766
+margin_left = 844.716
+margin_top = 567.063
+margin_right = 1010.72
+margin_bottom = 590.063
+custom_fonts/font = SubResource( 2 )
 text = "coded by myflea"
 __meta__ = {
 "_edit_use_anchors_": false

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/panetty.png-c5d2e9e4f047646c2b263aac43d69467.stex"
+path="res://.import/volpescu.png-1092714ed8826d50120639dfbb31e891.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/sol/panetty.png"
-dest_files=[ "res://.import/panetty.png-c5d2e9e4f047646c2b263aac43d69467.stex" ]
+source_file="res://images/sol/volpescu.png"
+dest_files=[ "res://.import/volpescu.png-1092714ed8826d50120639dfbb31e891.stex" ]
 
 [params]
 

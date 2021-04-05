@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/alessandro_nannipieri.png-40f5af4e878ac514dc8cb13e4181752e.stex"
+path="res://.import/sabaku_no_maiku.png-ade0699b6465d74746fde08d1fdaf3d9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/sol/alessandro_nannipieri.png"
-dest_files=[ "res://.import/alessandro_nannipieri.png-40f5af4e878ac514dc8cb13e4181752e.stex" ]
+source_file="res://images/sol/sabaku_no_maiku.png"
+dest_files=[ "res://.import/sabaku_no_maiku.png-ade0699b6465d74746fde08d1fdaf3d9.stex" ]
 
 [params]
 

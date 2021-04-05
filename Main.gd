@@ -4,8 +4,8 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-var nomi_da_estrarre = ['dario_moccia', 'panetty', 'alessandro_nannipieri', 'davide_masella', 'dada', 'agnese_innocente',
-'mangaka96', 'giovanni_ballerini', 'sdrumox', 'marco_merrino']
+var nomi_da_estrarre = ['dario_moccia', 'simone_panetti', 'nannitwitch', 'davide_masella', 'dada', 'agnese_innocente',
+'mangaka96', 'volpescu', 'sdrumox', 'marco_merrino', 'francesco_fossetti', 'sabaku_no_maiku']
 var lettere_da_indovinare = []
 var lettere_indovinate = []
 
@@ -87,7 +87,6 @@ func controlla_lettera(lettera):
 		
 		if lettere_da_indovinare.empty():
 			gioco_finito = true
-			get_node("label_errori").text = "EVVIVA!!!"
 			var nome_immagine = "res://images/sol/" + String(self.estratta) + ".png"
 			var immagine_da_mettere = load(nome_immagine)
 			get_node("img_da_indovinare").texture = immagine_da_mettere
