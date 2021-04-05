@@ -40,8 +40,8 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 2 )
 
 [node name="img_da_indovinare" type="Sprite" parent="."]
-position = Vector2( 511.226, 126.393 )
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( 521.305, 133.283 )
+scale = Vector2( 0.44, 0.44 )
 texture = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -83,10 +83,10 @@ __meta__ = {
 }
 
 [node name="label_pool" type="Label" parent="."]
-margin_left = 13.1598
-margin_top = 570.411
-margin_right = 297.16
-margin_bottom = 592.411
+margin_left = 359.638
+margin_top = 566.631
+margin_right = 643.638
+margin_bottom = 588.631
 custom_fonts/font = SubResource( 3 )
 text = "N° di personaggi disponibili: "
 align = 1
@@ -95,6 +95,7 @@ __meta__ = {
 }
 
 [node name="btn_reset" type="Button" parent="."]
+visible = false
 margin_left = 904.092
 margin_top = 20.0086
 margin_right = 1001.09

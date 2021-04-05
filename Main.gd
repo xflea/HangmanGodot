@@ -5,7 +5,8 @@ extends Node2D
 # var b = "text"
 
 var nomi_da_estrarre = ['dario_moccia', 'simone_panetti', 'nannitwitch', 'davide_masella', 'dada', 'agnese_innocente',
-'mangaka96', 'volpescu', 'sdrumox', 'marco_merrino', 'francesco_fossetti', 'sabaku_no_maiku']
+'mangaka96', 'volpescu', 'sdrumox', 'marco_merrino', 'francesco_fossetti', 'sabaku_no_maiku', 'luna', 'ercolino',
+'francesco_cilurzo', 'luis_sal', 'martin_sal']
 var lettere_da_indovinare = []
 var lettere_indovinate = []
 
@@ -49,7 +50,6 @@ func _ready():
 	
 	get_node("label_da_indovinare").text = estratta_a_schermo
 	get_node("label_pool").text = "N° di personaggi disponibili: " + String(nomi_da_estrarre.size())
-
 
 func estrai(array):
 	var rng = RandomNumberGenerator.new()
@@ -97,13 +97,14 @@ func controlla_lettera(lettera):
 		if errori < max_errori:
 			var nome_immagine = "res://images/hangman/" + String(errori) + ".png"
 			var immagine_da_mettere = load(nome_immagine)
-			get_node("label_errori").text = String(errori) + "/" + String(max_errori)
 			get_node("img_impiccato").texture = immagine_da_mettere
 		else:
+			errori = max_errori
 			gioco_finito = true
-			get_node("label_errori").text = "GAME OVER"
+			get_node("label_da_indovinare").text = "GAME OVER"
 			get_node("img_impiccato").texture = load("res://images/hangman/6.png")
 			get_node("btn_reset").visible = true
+		get_node("label_errori").text = String(errori) + "/" + String(max_errori)
 
 # tutti bottoni da qui sotto
 
