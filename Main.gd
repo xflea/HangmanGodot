@@ -21,10 +21,31 @@ var gioco_finito = false
 func _ready():
 	var estratta = estrai(nomi_da_estrarre)
 	
-	for lettera in estratta:
-		if lettera == "_":
-			estratta_a_schermo += "    "
-		estratta_a_schermo += "_ "
+	print(estratta)
+	
+#	for lettera in estratta:
+#		if lettera == "_":
+#			estratta_a_schermo += "    "
+#		estratta_a_schermo += "_ "
+	
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	var my_random_number = rng.randf_range(0, lettere_da_indovinare.size())
+	var lettera_suggerimento = lettere_da_indovinare[my_random_number]
+	lettere_da_indovinare.erase(lettera_suggerimento)
+	lettere_indovinate.append(lettera_suggerimento)
+	
+	var btn_da_bloccare = "btn_" + String(lettera_suggerimento)
+	get_node(btn_da_bloccare).disabled = true
+	
+	for letterina in estratta:
+		if letterina == lettera_suggerimento:
+			estratta_a_schermo += lettera_suggerimento + " "
+		else:
+			if letterina == "_":
+				estratta_a_schermo += "    "
+			else:
+				estratta_a_schermo += "_ "
 	
 	get_node("label_da_indovinare").text = estratta_a_schermo
 	get_node("label_pool").text = "N° di personaggi disponibili: " + String(nomi_da_estrarre.size())
