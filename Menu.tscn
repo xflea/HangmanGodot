@@ -1,11 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://images/wall.png" type="Texture" id=2]
 [ext_resource path="res://New Super Mario Font U.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://images/logo_moccia.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 31
+size = 47
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
@@ -25,24 +26,45 @@ position = Vector2( 500, 300 )
 z_index = -1
 texture = ExtResource( 2 )
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 133, 356.545 )
+rotation = 0.785397
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 4 )
+
 [node name="btn_inizia" type="Button" parent="."]
-margin_left = 667.092
-margin_top = 292.545
-margin_right = 832.092
-margin_bottom = 366.545
+margin_left = 680.092
+margin_top = 416.545
+margin_right = 845.092
+margin_bottom = 490.545
 text = "Inizia"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="titolo" type="Label" parent="."]
-margin_left = 625.523
-margin_top = 52.3251
-margin_right = 762.523
-margin_bottom = 85.3251
-rect_scale = Vector2( 2, 2 )
+margin_left = 662.767
+margin_top = 48.7575
+margin_right = 872.767
+margin_bottom = 98.7575
 custom_fonts/font = SubResource( 1 )
 text = "Hangman"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="caption" type="Label" parent="."]
+margin_left = 504.268
+margin_top = 127.27
+margin_right = 1007.27
+margin_bottom = 389.27
+custom_fonts/font = SubResource( 1 )
+text = "Riuscirai a indovinare
+tutti i personaggi
+presenti nel gioco?
+
+Capiamo."
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
-[ext_resource path="res://images/hangman/0.png" type="Texture" id=2]
+[ext_resource path="res://images/logo_moccia.png" type="Texture" id=2]
 [ext_resource path="res://images/dunno.png" type="Texture" id=3]
 [ext_resource path="res://images/wall.png" type="Texture" id=4]
 [ext_resource path="res://New Super Mario Font U.ttf" type="DynamicFontData" id=5]
@@ -14,7 +14,7 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 32
+size = 27
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
@@ -28,15 +28,15 @@ font_data = ExtResource( 5 )
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sfondo" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.784314 )
 position = Vector2( 500, 300 )
 z_index = -1
 texture = ExtResource( 4 )
 
 [node name="img_impiccato" type="Sprite" parent="."]
-position = Vector2( 77.9186, 74.0205 )
-scale = Vector2( 0.2, 0.2 )
+position = Vector2( 59.0198, 61.4213 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
 
 [node name="img_da_indovinare" type="Sprite" parent="."]
@@ -48,7 +48,7 @@ texture = ExtResource( 3 )
 margin_left = 38.0
 margin_top = 339.0
 margin_right = 936.0
-margin_bottom = 534.0
+margin_bottom = 565.0
 color = Color( 0, 0, 0, 0.784314 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -69,13 +69,13 @@ __meta__ = {
 }
 
 [node name="label_errori" type="Label" parent="."]
-margin_left = 22.6988
-margin_top = 133.663
-margin_right = 81.6992
-margin_bottom = 167.663
+margin_left = 80.4349
+margin_top = 37.909
+margin_right = 139.435
+margin_bottom = 71.909
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 2 )
-text = "0/5"
+text = "x5"
 align = 1
 uppercase = true
 __meta__ = {
@@ -84,9 +84,9 @@ __meta__ = {
 
 [node name="label_pool" type="Label" parent="."]
 margin_left = 359.638
-margin_top = 566.631
+margin_top = 570.631
 margin_right = 643.638
-margin_bottom = 588.631
+margin_bottom = 592.631
 custom_fonts/font = SubResource( 3 )
 text = "N° di personaggi disponibili: "
 align = 1
@@ -101,6 +101,17 @@ margin_top = 20.0086
 margin_right = 1001.09
 margin_bottom = 61.0086
 text = "Nuova Partita"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_next" type="Button" parent="."]
+visible = false
+margin_left = 904.092
+margin_top = 21.0086
+margin_right = 1001.09
+margin_bottom = 62.0086
+text = "Prossimo"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -375,6 +386,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="btn_0" type="Button" parent="."]
+margin_left = 730.0
+margin_top = 528.0
+margin_right = 895.0
+margin_bottom = 556.0
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="btn_2" type="Button" parent="."]
 margin_left = 790.0
 margin_top = 480.0
@@ -455,6 +476,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="btn_reset" to="." method="_on_btn_reset_pressed"]
+[connection signal="pressed" from="btn_next" to="." method="_on_btn_next_pressed"]
 [connection signal="pressed" from="btn_a" to="." method="_on_btn_a_pressed"]
 [connection signal="pressed" from="btn_s" to="." method="_on_btn_s_pressed"]
 [connection signal="pressed" from="btn_d" to="." method="_on_btn_d_pressed"]
@@ -482,6 +504,7 @@ __meta__ = {
 [connection signal="pressed" from="btn_n" to="." method="_on_btn_n_pressed"]
 [connection signal="pressed" from="btn_m" to="." method="_on_btn_m_pressed"]
 [connection signal="pressed" from="btn_1" to="." method="_on_btn_1_pressed"]
+[connection signal="pressed" from="btn_0" to="." method="_on_btn_0_pressed"]
 [connection signal="pressed" from="btn_2" to="." method="_on_btn_2_pressed"]
 [connection signal="pressed" from="btn_3" to="." method="_on_btn_3_pressed"]
 [connection signal="pressed" from="btn_4" to="." method="_on_btn_4_pressed"]

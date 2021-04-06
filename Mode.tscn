@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Mode.gd" type="Script" id=1]
+[ext_resource path="res://images/wall.png" type="Texture" id=2]
+[ext_resource path="res://New Super Mario Font U.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 26
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Mode" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sfondo" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.784314 )
+position = Vector2( 500, 300 )
+z_index = -1
+texture = ExtResource( 2 )
+
+[node name="btn_normal" type="Button" parent="."]
+margin_left = 183.085
+margin_top = 450.0
+margin_right = 348.085
+margin_bottom = 525.899
+text = "Normale"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_hardcore" type="Button" parent="."]
+margin_left = 677.795
+margin_top = 450.0
+margin_right = 842.795
+margin_bottom = 524.0
+text = "Hardcore"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="caption_normale" type="Label" parent="."]
+margin_left = 21.054
+margin_top = 132.0
+margin_right = 501.054
+margin_bottom = 315.0
+custom_fonts/font = SubResource( 1 )
+text = "5 Errori disponibili
+
+Ad ogni personaggio indovinato
+gli errori si resettano
+
+Adatto a chi non e' un vero Ace Gamer"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="caption_hardcore" type="Label" parent="."]
+margin_left = 552.541
+margin_top = 132.0
+margin_right = 964.541
+margin_bottom = 315.0
+custom_fonts/font = SubResource( 1 )
+text = "5 Errori disponibili
+
+Ad ogni personaggio indovinato
+gli errori NON si resettano
+
+Solo per veri Ace Gamers"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="btn_normal" to="." method="_on_btn_normal_pressed"]
+[connection signal="pressed" from="btn_hardcore" to="." method="_on_btn_hardcore_pressed"]

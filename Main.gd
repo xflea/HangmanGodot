@@ -4,14 +4,16 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-var nomi_da_estrarre = ['dario_moccia', 'simone_panetti', 'nannitwitch', 'davide_masella', 'dada', 'agnese_innocente',
-'mangaka96', 'volpescu', 'sdrumox', 'marco_merrino', 'francesco_fossetti', 'sabaku_no_maiku', 'luna', 'ercolino',
-'francesco_cilurzo', 'luis_sal', 'martin_sal']
+# inserisci monitor, il cippe, david rubino, cerbero podcast
+#var nomi_da_estrarre = ['dario_moccia', 'simone_panetti', 'nannitwitch', 'davide_masella', 'dada', 'agnese_innocente',
+#'mangaka96', 'volpescu', 'sdrumox', 'marco_merrino', 'francesco_fossetti', 'sabaku_no_maiku', 'luna', 'ercolino',
+#'francesco_cilurzo', 'luis_sal', 'martin_sal']
+var nomi_da_estrarre = ['dada', 'luna']
+
 var lettere_da_indovinare = []
 var lettere_indovinate = []
 
-var errori = 0
-var max_errori = 5
+var errori = 5
 
 var estratta = ""
 var estratta_a_schermo = ""
@@ -22,12 +24,7 @@ var gioco_finito = false
 func _ready():
 	var estratta = estrai(nomi_da_estrarre)
 	
-	print(estratta)
-	
-#	for lettera in estratta:
-#		if lettera == "_":
-#			estratta_a_schermo += "    "
-#		estratta_a_schermo += "_ "
+	print(GameGlobals.difficulty)
 	
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
@@ -48,8 +45,12 @@ func _ready():
 			else:
 				estratta_a_schermo += "_ "
 	
+	get_node("label_errori").text = "x" + String(errori)
 	get_node("label_da_indovinare").text = estratta_a_schermo
-	get_node("label_pool").text = "N° di personaggi disponibili: " + String(nomi_da_estrarre.size())
+	if nomi_da_estrarre.size() == 1:
+		get_node("label_pool").text = "Ultimo personaggio!"
+	else:
+		get_node("label_pool").text = "N° personaggi da indovinare: " + String(nomi_da_estrarre.size() - 1)
 
 func estrai(array):
 	var rng = RandomNumberGenerator.new()
@@ -90,26 +91,45 @@ func controlla_lettera(lettera):
 			var nome_immagine = "res://images/sol/" + String(self.estratta) + ".png"
 			var immagine_da_mettere = load(nome_immagine)
 			get_node("img_da_indovinare").texture = immagine_da_mettere
-			get_node("btn_reset").visible = true
+			get_node("btn_next").visible = true
+			nomi_da_estrarre.erase(estratta)
 
 	else:
-		errori += 1
-		if errori < max_errori:
-			var nome_immagine = "res://images/hangman/" + String(errori) + ".png"
-			var immagine_da_mettere = load(nome_immagine)
-			get_node("img_impiccato").texture = immagine_da_mettere
-		else:
-			errori = max_errori
+		errori -= 1
+		if errori == 0:
+			errori = 0
 			gioco_finito = true
 			get_node("label_da_indovinare").text = "GAME OVER"
-			get_node("img_impiccato").texture = load("res://images/hangman/6.png")
 			get_node("btn_reset").visible = true
-		get_node("label_errori").text = String(errori) + "/" + String(max_errori)
+			get_node("img_impiccato").texture = load("res://images/game_over.png")
+		get_node("label_errori").text = "x" + String(errori)
 
 # tutti bottoni da qui sotto
 
 func _on_btn_reset_pressed():
 	get_tree().reload_current_scene()
+
+func _on_btn_next_pressed():
+	if nomi_da_estrarre.size() == 0:
+		get_tree().change_scene("res://Finito.tscn")
+	else:
+		var valori = "qwertyuiopasdfghjklzxcvbnm123456789"
+		for lettera in valori:
+			var stringa_btn = "btn_" + String(lettera)
+			get_node(stringa_btn).disabled = false 
+		
+		get_node("img_da_indovinare").texture = load("res://images/dunno.png")
+		lettere_da_indovinare = []
+		lettere_indovinate = []
+		estratta = ""
+		estratta_a_schermo = ""
+		gioco_finito = false
+		get_node("btn_next").visible = false
+		
+		if GameGlobals.difficulty == "normal":
+			errori = 5
+		
+		_ready()
 
 func _on_btn_a_pressed():
 	if !gioco_finito:
@@ -285,3 +305,8 @@ func _on_btn_9_pressed():
 	if !gioco_finito:
 		get_node("btn_9").disabled = true
 		controlla_lettera("9")
+
+func _on_btn_0_pressed():
+	if !gioco_finito:
+		get_node("btn_0").disabled = true
+		controlla_lettera("0")

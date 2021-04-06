@@ -19,6 +19,10 @@ config/name="Hangman"
 run/main_scene="res://Menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameGlobals="*res://GameGlobals.gd"
+
 [display]
 
 window/size/resizable=false
