@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://images/logo_moccia.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://images/wall.png" type="Texture" id=4]
 [ext_resource path="res://New Super Mario Font U.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Super Mario Bros. 2.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://sounds/sound_correct.wav" type="AudioStream" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 11
@@ -475,6 +476,9 @@ text = "9"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="sound_correct" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
 [connection signal="pressed" from="btn_reset" to="." method="_on_btn_reset_pressed"]
 [connection signal="pressed" from="btn_next" to="." method="_on_btn_next_pressed"]
 [connection signal="pressed" from="btn_a" to="." method="_on_btn_a_pressed"]

@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GameOver.gd" type="Script" id=1]
+[ext_resource path="res://images/wall.png" type="Texture" id=2]
+[ext_resource path="res://New Super Mario Font U.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://images/game_over.png" type="Texture" id=4]
+[ext_resource path="res://sounds/audio_risata_dada.wav" type="AudioStream" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 44
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="End" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sfondo" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.784314 )
+position = Vector2( 500, 300 )
+z_index = -1
+texture = ExtResource( 2 )
+
+[node name="btn_new" type="Button" parent="."]
+margin_left = 431.629
+margin_top = 488.763
+margin_right = 596.629
+margin_bottom = 562.763
+text = "Nuova Partita"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="caption" type="Label" parent="."]
+margin_left = 120.812
+margin_top = 74.7035
+margin_right = 914.812
+margin_bottom = 267.703
+custom_fonts/font = SubResource( 1 )
+text = "Peccato...
+...sara' per la prossima volta"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprite_over" type="Sprite" parent="."]
+position = Vector2( 515.308, 325.042 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 4 )
+
+[node name="risata_dada" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+[connection signal="pressed" from="btn_new" to="." method="_on_btn_new_pressed"]

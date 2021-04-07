@@ -87,6 +87,7 @@ func controlla_lettera(lettera):
 		get_node("label_da_indovinare").text = estratta_a_schermo
 		
 		if lettere_da_indovinare.empty():
+			$sound_correct.play()
 			gioco_finito = true
 			var nome_immagine = "res://images/sol/" + String(self.estratta) + ".png"
 			var immagine_da_mettere = load(nome_immagine)
@@ -97,11 +98,12 @@ func controlla_lettera(lettera):
 	else:
 		errori -= 1
 		if errori == 0:
-			errori = 0
-			gioco_finito = true
-			get_node("label_da_indovinare").text = "GAME OVER"
-			get_node("btn_reset").visible = true
-			get_node("img_impiccato").texture = load("res://images/game_over.png")
+#			errori = 0
+#			gioco_finito = true
+#			get_node("label_da_indovinare").text = "GAME OVER"
+#			get_node("btn_reset").visible = true
+#			get_node("img_impiccato").texture = load("res://images/game_over.png")
+			get_tree().change_scene("res://GameOver.tscn")
 		get_node("label_errori").text = "x" + String(errori)
 
 # tutti bottoni da qui sotto
