@@ -25,8 +25,6 @@ var gioco_finito = false
 func _ready():
 	var estratta = estrai(nomi_da_estrarre)
 	
-	print(GameGlobals.difficulty)
-	
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	var my_random_number = rng.randf_range(0, lettere_da_indovinare.size())

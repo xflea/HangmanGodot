@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://images/wall.png" type="Texture" id=2]
@@ -7,31 +7,31 @@
 [ext_resource path="res://images/btn_normal.png" type="Texture" id=5]
 [ext_resource path="res://images/btn_pressed.png" type="Texture" id=6]
 
-[sub_resource type="StyleBoxTexture" id=5]
+[sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 6 )
-region_rect = Rect2( 0, 0, 164, 75 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 6 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 6 )
 
 [sub_resource type="StyleBoxTexture" id=3]
-texture = ExtResource( 6 )
-region_rect = Rect2( 0, 0, 164, 75 )
-
-[sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 5 )
-region_rect = Rect2( 0, 0, 164, 75 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=4]
 size = 30
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=5]
 size = 47
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=6]
 size = 21
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
@@ -57,10 +57,12 @@ margin_left = 672.957
 margin_top = 427.248
 margin_right = 837.957
 margin_bottom = 501.248
-custom_styles/hover = SubResource( 5 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
-custom_fonts/font = SubResource( 6 )
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "Inizia"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -71,7 +73,7 @@ margin_left = 617.577
 margin_top = 52.3251
 margin_right = 917.577
 margin_bottom = 102.325
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 5 )
 text = "Indovina chi?"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -82,7 +84,7 @@ margin_left = 504.268
 margin_top = 127.27
 margin_right = 1007.27
 margin_bottom = 389.27
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 5 )
 text = "Riuscirai a indovinare
 tutti i personaggi
 presenti nel gioco?
@@ -98,7 +100,7 @@ margin_left = 844.716
 margin_top = 567.063
 margin_right = 1010.72
 margin_bottom = 590.063
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 6 )
 text = "coded by myflea"
 __meta__ = {
 "_edit_use_anchors_": false

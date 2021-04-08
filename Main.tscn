@@ -30,19 +30,15 @@ font_data = ExtResource( 5 )
 
 [sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 9 )
-region_rect = Rect2( 0, 0, 164, 75 )
 
 [sub_resource type="StyleBoxTexture" id=5]
 texture = ExtResource( 9 )
-region_rect = Rect2( 0, 0, 164, 75 )
 
 [sub_resource type="StyleBoxTexture" id=6]
 texture = ExtResource( 9 )
-region_rect = Rect2( 0, 0, 164, 75 )
 
 [sub_resource type="StyleBoxTexture" id=7]
 texture = ExtResource( 8 )
-region_rect = Rect2( 0, 0, 164, 75 )
 
 [sub_resource type="DynamicFont" id=8]
 size = 20
@@ -65,25 +61,25 @@ scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
 
 [node name="img_da_indovinare" type="Sprite" parent="."]
-position = Vector2( 521.305, 133.283 )
+position = Vector2( 530.124, 124.464 )
 scale = Vector2( 0.44, 0.44 )
 texture = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 38.0
-margin_top = 339.0
-margin_right = 936.0
-margin_bottom = 565.0
+margin_left = 46.8194
+margin_top = 330.181
+margin_right = 944.819
+margin_bottom = 556.181
 color = Color( 0, 0, 0, 0.784314 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="label_da_indovinare" type="Label" parent="."]
-margin_left = 30.0
-margin_top = 272.0
-margin_right = 519.0
-margin_bottom = 286.0
+margin_left = 38.8194
+margin_top = 263.181
+margin_right = 527.819
+margin_bottom = 277.181
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = SubResource( 1 )
 text = "nome da indovinare"
@@ -108,10 +104,10 @@ __meta__ = {
 }
 
 [node name="label_pool" type="Label" parent="."]
-margin_left = 359.638
-margin_top = 570.631
-margin_right = 643.638
-margin_bottom = 592.631
+margin_left = 368.457
+margin_top = 561.812
+margin_right = 652.457
+margin_bottom = 583.812
 custom_fonts/font = SubResource( 3 )
 text = "N° di personaggi disponibili: "
 align = 1
@@ -136,6 +132,7 @@ margin_left = 877.0
 margin_top = 27.0
 margin_right = 992.0
 margin_bottom = 80.0
+mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/focus = SubResource( 6 )
@@ -147,360 +144,396 @@ __meta__ = {
 }
 
 [node name="btn_a" type="Button" parent="."]
-margin_left = 80.0
-margin_top = 420.0
-margin_right = 125.0
-margin_bottom = 461.0
+margin_left = 88.8194
+margin_top = 411.181
+margin_right = 133.819
+margin_bottom = 452.181
+mouse_default_cursor_shape = 2
 text = "A"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_s" type="Button" parent="."]
-margin_left = 140.0
-margin_top = 420.0
-margin_right = 185.0
-margin_bottom = 461.0
+margin_left = 148.819
+margin_top = 411.181
+margin_right = 193.819
+margin_bottom = 452.181
+mouse_default_cursor_shape = 2
 text = "S"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_d" type="Button" parent="."]
-margin_left = 200.0
-margin_top = 420.0
-margin_right = 245.0
-margin_bottom = 461.0
+margin_left = 208.819
+margin_top = 411.181
+margin_right = 253.819
+margin_bottom = 452.181
+mouse_default_cursor_shape = 2
 text = "D"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_f" type="Button" parent="."]
-margin_left = 258.811
-margin_top = 420.0
-margin_right = 303.811
-margin_bottom = 461.0
+margin_left = 267.63
+margin_top = 411.181
+margin_right = 312.63
+margin_bottom = 452.181
+mouse_default_cursor_shape = 2
 text = "F"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_g" type="Button" parent="."]
-margin_left = 320.0
-margin_top = 420.0
-margin_right = 365.0
-margin_bottom = 461.0
+margin_left = 328.819
+margin_top = 411.181
+margin_right = 373.819
+margin_bottom = 452.181
+mouse_default_cursor_shape = 2
 text = "G"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_h" type="Button" parent="."]
-margin_left = 380.0
-margin_top = 418.811
-margin_right = 425.0
-margin_bottom = 459.811
+margin_left = 388.819
+margin_top = 409.992
+margin_right = 433.819
+margin_bottom = 450.992
+mouse_default_cursor_shape = 2
 text = "H"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_j" type="Button" parent="."]
-margin_left = 440.0
-margin_top = 420.0
-margin_right = 485.0
-margin_bottom = 461.0
+margin_left = 448.819
+margin_top = 411.181
+margin_right = 493.819
+margin_bottom = 452.181
+mouse_default_cursor_shape = 2
 text = "J"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_k" type="Button" parent="."]
-margin_left = 500.0
-margin_top = 420.0
-margin_right = 545.0
-margin_bottom = 461.0
+margin_left = 508.819
+margin_top = 411.181
+margin_right = 553.819
+margin_bottom = 452.181
+mouse_default_cursor_shape = 2
 text = "K"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_l" type="Button" parent="."]
-margin_left = 560.0
-margin_top = 420.0
-margin_right = 605.0
-margin_bottom = 461.0
+margin_left = 568.819
+margin_top = 411.181
+margin_right = 613.819
+margin_bottom = 452.181
+mouse_default_cursor_shape = 2
 text = "L"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_z" type="Button" parent="."]
-margin_left = 110.0
-margin_top = 480.0
-margin_right = 155.0
-margin_bottom = 521.0
+margin_left = 118.819
+margin_top = 471.181
+margin_right = 163.819
+margin_bottom = 512.181
+mouse_default_cursor_shape = 2
 text = "Z"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_x" type="Button" parent="."]
-margin_left = 170.0
-margin_top = 480.0
-margin_right = 215.0
-margin_bottom = 521.0
+margin_left = 178.819
+margin_top = 471.181
+margin_right = 223.819
+margin_bottom = 512.181
+mouse_default_cursor_shape = 2
 text = "X"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_c" type="Button" parent="."]
-margin_left = 230.0
-margin_top = 480.0
-margin_right = 275.0
-margin_bottom = 521.0
+margin_left = 238.819
+margin_top = 471.181
+margin_right = 283.819
+margin_bottom = 512.181
+mouse_default_cursor_shape = 2
 text = "C"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_v" type="Button" parent="."]
-margin_left = 290.0
-margin_top = 480.0
-margin_right = 335.0
-margin_bottom = 521.0
+margin_left = 298.819
+margin_top = 471.181
+margin_right = 343.819
+margin_bottom = 512.181
+mouse_default_cursor_shape = 2
 text = "V"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_q" type="Button" parent="."]
-margin_left = 50.0
-margin_top = 360.0
-margin_right = 95.0
-margin_bottom = 401.0
+margin_left = 58.8194
+margin_top = 351.181
+margin_right = 103.819
+margin_bottom = 392.181
+mouse_default_cursor_shape = 2
 text = "Q"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_w" type="Button" parent="."]
-margin_left = 110.0
-margin_top = 360.0
-margin_right = 155.0
-margin_bottom = 401.0
+margin_left = 118.819
+margin_top = 351.181
+margin_right = 163.819
+margin_bottom = 392.181
+mouse_default_cursor_shape = 2
 text = "W"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_e" type="Button" parent="."]
-margin_left = 170.0
-margin_top = 360.0
-margin_right = 215.0
-margin_bottom = 401.0
+margin_left = 178.819
+margin_top = 351.181
+margin_right = 223.819
+margin_bottom = 392.181
+mouse_default_cursor_shape = 2
 text = "E"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_r" type="Button" parent="."]
-margin_left = 230.0
-margin_top = 360.0
-margin_right = 275.0
-margin_bottom = 401.0
+margin_left = 238.819
+margin_top = 351.181
+margin_right = 283.819
+margin_bottom = 392.181
+mouse_default_cursor_shape = 2
 text = "R"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_t" type="Button" parent="."]
-margin_left = 290.0
-margin_top = 360.0
-margin_right = 335.0
-margin_bottom = 401.0
+margin_left = 298.819
+margin_top = 351.181
+margin_right = 343.819
+margin_bottom = 392.181
+mouse_default_cursor_shape = 2
 text = "T"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_y" type="Button" parent="."]
-margin_left = 350.0
-margin_top = 360.0
-margin_right = 395.0
-margin_bottom = 401.0
+margin_left = 358.819
+margin_top = 351.181
+margin_right = 403.819
+margin_bottom = 392.181
+mouse_default_cursor_shape = 2
 text = "Y"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_u" type="Button" parent="."]
-margin_left = 410.0
-margin_top = 360.0
-margin_right = 455.0
-margin_bottom = 401.0
+margin_left = 418.819
+margin_top = 351.181
+margin_right = 463.819
+margin_bottom = 392.181
+mouse_default_cursor_shape = 2
 text = "U"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_i" type="Button" parent="."]
-margin_left = 470.0
-margin_top = 360.0
-margin_right = 515.0
-margin_bottom = 401.0
+margin_left = 478.819
+margin_top = 351.181
+margin_right = 523.819
+margin_bottom = 392.181
+mouse_default_cursor_shape = 2
 text = "I"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_o" type="Button" parent="."]
-margin_left = 530.0
-margin_top = 360.0
-margin_right = 575.0
-margin_bottom = 401.0
+margin_left = 538.819
+margin_top = 351.181
+margin_right = 583.819
+margin_bottom = 392.181
+mouse_default_cursor_shape = 2
 text = "O"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_p" type="Button" parent="."]
-margin_left = 590.0
-margin_top = 360.0
-margin_right = 635.0
-margin_bottom = 401.0
+margin_left = 598.819
+margin_top = 351.181
+margin_right = 643.819
+margin_bottom = 392.181
+mouse_default_cursor_shape = 2
 text = "P"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_b" type="Button" parent="."]
-margin_left = 350.0
-margin_top = 480.0
-margin_right = 395.0
-margin_bottom = 521.0
+margin_left = 358.819
+margin_top = 471.181
+margin_right = 403.819
+margin_bottom = 512.181
+mouse_default_cursor_shape = 2
 text = "B"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_n" type="Button" parent="."]
-margin_left = 410.0
-margin_top = 480.0
-margin_right = 455.0
-margin_bottom = 521.0
+margin_left = 418.819
+margin_top = 471.181
+margin_right = 463.819
+margin_bottom = 512.181
+mouse_default_cursor_shape = 2
 text = "N"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_m" type="Button" parent="."]
-margin_left = 470.0
-margin_top = 480.0
-margin_right = 515.0
-margin_bottom = 521.0
+margin_left = 478.819
+margin_top = 471.181
+margin_right = 523.819
+margin_bottom = 512.181
+mouse_default_cursor_shape = 2
 text = "M"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_1" type="Button" parent="."]
-margin_left = 730.0
-margin_top = 480.0
-margin_right = 775.0
-margin_bottom = 521.0
+margin_left = 738.819
+margin_top = 471.181
+margin_right = 783.819
+margin_bottom = 512.181
+mouse_default_cursor_shape = 2
 text = "1"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_0" type="Button" parent="."]
-margin_left = 730.0
-margin_top = 528.0
-margin_right = 895.0
-margin_bottom = 556.0
+margin_left = 738.819
+margin_top = 519.181
+margin_right = 903.819
+margin_bottom = 547.181
+mouse_default_cursor_shape = 2
 text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_2" type="Button" parent="."]
-margin_left = 790.0
-margin_top = 480.0
-margin_right = 835.0
-margin_bottom = 521.0
+margin_left = 798.819
+margin_top = 471.181
+margin_right = 843.819
+margin_bottom = 512.181
+mouse_default_cursor_shape = 2
 text = "2"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_3" type="Button" parent="."]
-margin_left = 850.0
-margin_top = 480.0
-margin_right = 895.0
-margin_bottom = 521.0
+margin_left = 858.819
+margin_top = 471.181
+margin_right = 903.819
+margin_bottom = 512.181
+mouse_default_cursor_shape = 2
 text = "3"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_4" type="Button" parent="."]
-margin_left = 730.0
-margin_top = 420.0
-margin_right = 775.0
-margin_bottom = 461.0
+margin_left = 738.819
+margin_top = 411.181
+margin_right = 783.819
+margin_bottom = 452.181
+mouse_default_cursor_shape = 2
 text = "4"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_5" type="Button" parent="."]
-margin_left = 790.0
-margin_top = 420.0
-margin_right = 835.0
-margin_bottom = 461.0
+margin_left = 798.819
+margin_top = 411.181
+margin_right = 843.819
+margin_bottom = 452.181
+mouse_default_cursor_shape = 2
 text = "5"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_6" type="Button" parent="."]
-margin_left = 850.0
-margin_top = 420.0
-margin_right = 895.0
-margin_bottom = 461.0
+margin_left = 858.819
+margin_top = 411.181
+margin_right = 903.819
+margin_bottom = 452.181
+mouse_default_cursor_shape = 2
 text = "6"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_7" type="Button" parent="."]
-margin_left = 730.0
-margin_top = 360.0
-margin_right = 775.0
-margin_bottom = 401.0
+margin_left = 738.819
+margin_top = 351.181
+margin_right = 783.819
+margin_bottom = 392.181
+mouse_default_cursor_shape = 2
 text = "7"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_8" type="Button" parent="."]
-margin_left = 790.0
-margin_top = 360.0
-margin_right = 835.0
-margin_bottom = 401.0
+margin_left = 798.819
+margin_top = 351.181
+margin_right = 843.819
+margin_bottom = 392.181
+mouse_default_cursor_shape = 2
 text = "8"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_9" type="Button" parent="."]
-margin_left = 850.0
-margin_top = 360.0
-margin_right = 895.0
-margin_bottom = 401.0
+margin_left = 858.819
+margin_top = 351.181
+margin_right = 903.819
+margin_bottom = 392.181
+mouse_default_cursor_shape = 2
 text = "9"
 __meta__ = {
 "_edit_use_anchors_": false
