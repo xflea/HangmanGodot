@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://images/logo_moccia.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://New Super Mario Font U.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Super Mario Bros. 2.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://sounds/sound_correct.wav" type="AudioStream" id=7]
+[ext_resource path="res://images/btn_normal.png" type="Texture" id=8]
+[ext_resource path="res://images/btn_pressed.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 11
@@ -21,6 +23,28 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 164, 75 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 164, 75 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 164, 75 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 164, 75 )
+
+[sub_resource type="DynamicFont" id=8]
 size = 20
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
@@ -108,10 +132,15 @@ __meta__ = {
 
 [node name="btn_next" type="Button" parent="."]
 visible = false
-margin_left = 904.092
-margin_top = 21.0086
-margin_right = 1001.09
-margin_bottom = 62.0086
+margin_left = 877.0
+margin_top = 27.0
+margin_right = 992.0
+margin_bottom = 80.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
 text = "Prossimo"
 __meta__ = {
 "_edit_use_anchors_": false

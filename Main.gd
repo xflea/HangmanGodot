@@ -4,11 +4,12 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-# inserisci monitor, il cippe, david rubino, cerbero podcast
-#var nomi_da_estrarre = ['dario_moccia', 'simone_panetti', 'nannitwitch', 'davide_masella', 'dada', 'agnese_innocente',
-#'mangaka96', 'volpescu', 'sdrumox', 'marco_merrino', 'francesco_fossetti', 'sabaku_no_maiku', 'luna', 'ercolino',
-#'francesco_cilurzo', 'luis_sal', 'martin_sal']
-var nomi_da_estrarre = ['dada', 'luna']
+# inserisci monitor, il cippe, david rubino
+var nomi_da_estrarre = ['dario_moccia', 'simone_panetti', 'nannitwitch', 'davide_masella', 'dada', 'agnese_innocente',
+'mangaka96', 'volpescu', 'sdrumox', 'marco_merrino', 'francesco_fossetti', 'sabaku_no_maiku', 'luna', 'ercolino',
+'francesco_cilurzo', 'luis_sal', 'martin_sal', 'cerbero_podcast', 'simone_santoro', 'mr_flame', 'davide_marra', 'david_rubino',
+'monitor_vanzina', 'il_cippe']
+#var nomi_da_estrarre = ['dada', 'luna']
 
 var lettere_da_indovinare = []
 var lettere_indovinate = []

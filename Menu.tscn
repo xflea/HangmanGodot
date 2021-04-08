@@ -1,9 +1,29 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://images/wall.png" type="Texture" id=2]
 [ext_resource path="res://New Super Mario Font U.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://images/logo_moccia.png" type="Texture" id=4]
+[ext_resource path="res://images/btn_normal.png" type="Texture" id=5]
+[ext_resource path="res://images/btn_pressed.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 164, 75 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 164, 75 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 164, 75 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 47
@@ -33,22 +53,26 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 4 )
 
 [node name="btn_inizia" type="Button" parent="."]
-margin_left = 680.092
-margin_top = 416.545
-margin_right = 845.092
-margin_bottom = 490.545
+margin_left = 672.957
+margin_top = 427.248
+margin_right = 837.957
+margin_bottom = 501.248
+custom_styles/hover = SubResource( 5 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "Inizia"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="titolo" type="Label" parent="."]
-margin_left = 662.767
-margin_top = 48.7575
-margin_right = 872.767
-margin_bottom = 98.7575
+margin_left = 617.577
+margin_top = 52.3251
+margin_right = 917.577
+margin_bottom = 102.325
 custom_fonts/font = SubResource( 1 )
-text = "Hangman"
+text = "Indovina chi?"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -1,10 +1,54 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Mode.gd" type="Script" id=1]
 [ext_resource path="res://images/wall.png" type="Texture" id=2]
 [ext_resource path="res://New Super Mario Font U.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://images/btn_normal.png" type="Texture" id=4]
+[ext_resource path="res://images/btn_pressed.png" type="Texture" id=5]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 164, 75 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 164, 75 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 164, 75 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 164, 75 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 164, 75 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 164, 75 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 164, 75 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 30
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
 size = 26
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
@@ -20,10 +64,15 @@ z_index = -1
 texture = ExtResource( 2 )
 
 [node name="btn_normal" type="Button" parent="."]
-margin_left = 183.085
+margin_left = 168.831
 margin_top = 450.0
-margin_right = 348.085
+margin_right = 333.831
 margin_bottom = 525.899
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "Normale"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -31,9 +80,14 @@ __meta__ = {
 
 [node name="btn_hardcore" type="Button" parent="."]
 margin_left = 677.795
-margin_top = 450.0
+margin_top = 449.109
 margin_right = 842.795
-margin_bottom = 524.0
+margin_bottom = 523.109
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
 text = "Hardcore"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -44,7 +98,7 @@ margin_left = 21.054
 margin_top = 132.0
 margin_right = 501.054
 margin_bottom = 315.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 6 )
 text = "5 Errori disponibili
 
 Ad ogni personaggio indovinato
@@ -61,7 +115,7 @@ margin_left = 552.541
 margin_top = 132.0
 margin_right = 964.541
 margin_bottom = 315.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 6 )
 text = "5 Errori disponibili
 
 Ad ogni personaggio indovinato
