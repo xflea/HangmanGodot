@@ -6,3 +6,5 @@ extends Node
 # var b = "text"
 
 var difficulty = ""
+
+var n_personaggi = 0

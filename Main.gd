@@ -4,12 +4,11 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-# inserisci mods, 
 var nomi_da_estrarre = ['dario_moccia', 'simone_panetti', 'nannitwitch', 'davide_masella', 'dada', 'agnese_innocente',
 'mangaka96', 'volpescu', 'sdrumox', 'marco_merrino', 'francesco_fossetti', 'sabaku_no_maiku', 'luna', 'ercolino',
 'francesco_cilurzo', 'luis_sal', 'martin_sal', 'cerbero_podcast', 'david_rubino', 'monitor_vanzina', 'il_cippe',
 'aleberi', 'fabrizio_moccia', 'gabro', 'il_masseo', 'kekko', 'matteo_vanelli', 'segatronchi', 'tete', 'venz',
-'victorlaszlo88', 'matteo_riso']
+'victorlaszlo88', 'matteo_riso', 'tomodachi_crew']
 
 var lettere_da_indovinare = []
 var lettere_indovinate = []
@@ -23,7 +22,13 @@ var gioco_finito = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var estratta = estrai(nomi_da_estrarre)
+	
+	if GameGlobals.n_personaggi == null:
+		GameGlobals.n_personaggi = nomi_da_estrarre.size()
+	
+	estratta = estrai(nomi_da_estrarre)
+	
+	#print(estratta)
 	
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
@@ -46,10 +51,10 @@ func _ready():
 	
 	get_node("label_errori").text = "x" + String(errori)
 	get_node("label_da_indovinare").text = estratta_a_schermo
-	if nomi_da_estrarre.size() == 1:
+	if GameGlobals.n_personaggi == 1:
 		get_node("label_pool").text = "Ultimo personaggio!"
 	else:
-		get_node("label_pool").text = "N° personaggi da indovinare: " + String(nomi_da_estrarre.size() - 1)
+		get_node("label_pool").text = "N° personaggi da indovinare: " + String(GameGlobals.n_personaggi - 1)
 
 func estrai(array):
 	var rng = RandomNumberGenerator.new()
@@ -93,15 +98,11 @@ func controlla_lettera(lettera):
 			get_node("img_da_indovinare").texture = immagine_da_mettere
 			get_node("btn_next").visible = true
 			nomi_da_estrarre.erase(estratta)
+			GameGlobals.n_personaggi -= 1
 
 	else:
 		errori -= 1
 		if errori == 0:
-#			errori = 0
-#			gioco_finito = true
-#			get_node("label_da_indovinare").text = "GAME OVER"
-#			get_node("btn_reset").visible = true
-#			get_node("img_impiccato").texture = load("res://images/game_over.png")
 			get_tree().change_scene("res://GameOver.tscn")
 		get_node("label_errori").text = "x" + String(errori)
 		$error.play()
@@ -112,7 +113,7 @@ func _on_btn_reset_pressed():
 	get_tree().reload_current_scene()
 
 func _on_btn_next_pressed():
-	if nomi_da_estrarre.size() == 0:
+	if GameGlobals.n_personaggi == 0:
 		get_tree().change_scene("res://Finito.tscn")
 	else:
 		var valori = "qwertyuiopasdfghjklzxcvbnm123456789"

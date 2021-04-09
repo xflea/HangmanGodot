@@ -17,4 +17,4 @@ func _ready():
 
 
 func _on_btn_inizia_pressed():
-	get_tree().change_scene("res://Mode.tscn")
+	get_tree().change_scene("res://Mode_N_Pers.tscn")

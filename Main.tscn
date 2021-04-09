@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://images/logo_moccia.png" type="Texture" id=2]
@@ -7,18 +7,20 @@
 [ext_resource path="res://New Super Mario Font U.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Super Mario Bros. 2.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://sounds/sound_correct.wav" type="AudioStream" id=7]
-[ext_resource path="res://images/btn_normal.png" type="Texture" id=8]
-[ext_resource path="res://images/btn_pressed.png" type="Texture" id=9]
+[ext_resource path="res://images/btn_pressed_red.png" type="Texture" id=8]
+[ext_resource path="res://images/btn_normal_red.png" type="Texture" id=9]
 [ext_resource path="res://sounds/error.wav" type="AudioStream" id=10]
+[ext_resource path="res://images/btn_pressed.png" type="Texture" id=11]
+[ext_resource path="res://images/btn_normal.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=1]
-size = 11
+size = 25
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 27
+size = 50
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
@@ -30,23 +32,36 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
 
 [sub_resource type="StyleBoxTexture" id=4]
-texture = ExtResource( 9 )
-region_rect = Rect2( 0, 0, 174, 85 )
+texture = ExtResource( 11 )
 
 [sub_resource type="StyleBoxTexture" id=5]
-texture = ExtResource( 9 )
-region_rect = Rect2( 0, 0, 174, 85 )
+texture = ExtResource( 11 )
 
 [sub_resource type="StyleBoxTexture" id=6]
-texture = ExtResource( 9 )
-region_rect = Rect2( 0, 0, 174, 85 )
+texture = ExtResource( 11 )
 
 [sub_resource type="StyleBoxTexture" id=7]
-texture = ExtResource( 8 )
-region_rect = Rect2( 0, 0, 174, 85 )
+texture = ExtResource( 12 )
 
 [sub_resource type="DynamicFont" id=8]
 size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 8 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 8 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 8 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=13]
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
@@ -81,11 +96,10 @@ __meta__ = {
 }
 
 [node name="label_da_indovinare" type="Label" parent="."]
-margin_left = 38.8194
-margin_top = 263.181
-margin_right = 527.819
-margin_bottom = 277.181
-rect_scale = Vector2( 2, 2 )
+margin_left = 30.0
+margin_top = 263.0
+margin_right = 996.0
+margin_bottom = 289.0
 custom_fonts/font = SubResource( 1 )
 text = "nome da indovinare"
 align = 1
@@ -95,11 +109,10 @@ __meta__ = {
 }
 
 [node name="label_errori" type="Label" parent="."]
-margin_left = 80.4349
-margin_top = 37.909
-margin_right = 139.435
-margin_bottom = 71.909
-rect_scale = Vector2( 2, 2 )
+margin_left = 106.752
+margin_top = 47.3156
+margin_right = 170.752
+margin_bottom = 100.316
 custom_fonts/font = SubResource( 2 )
 text = "x5"
 align = 1
@@ -549,6 +562,21 @@ stream = ExtResource( 7 )
 
 [node name="error" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
+
+[node name="btn_quit" type="Button" parent="."]
+margin_left = 62.0
+margin_top = 127.0
+margin_right = 151.0
+margin_bottom = 172.0
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
+text = "Esci"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="btn_reset" to="." method="_on_btn_reset_pressed"]
 [connection signal="pressed" from="btn_next" to="." method="_on_btn_next_pressed"]
 [connection signal="pressed" from="btn_a" to="." method="_on_btn_a_pressed"]
