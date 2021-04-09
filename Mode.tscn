@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Mode.gd" type="Script" id=1]
 [ext_resource path="res://images/wall.png" type="Texture" id=2]
@@ -8,14 +8,17 @@
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="StyleBoxTexture" id=2]
 
 [sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 30
@@ -25,18 +28,28 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxTexture" id=6]
 texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="StyleBoxTexture" id=7]
 texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="StyleBoxTexture" id=8]
 texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="StyleBoxTexture" id=9]
 texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="DynamicFont" id=10]
 size = 30
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 38
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
@@ -73,9 +86,9 @@ __meta__ = {
 }
 
 [node name="btn_hardcore" type="Button" parent="."]
-margin_left = 677.795
+margin_left = 693.795
 margin_top = 449.109
-margin_right = 842.795
+margin_right = 858.795
 margin_bottom = 523.109
 mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 6 )
@@ -88,11 +101,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="titolo" type="Label" parent="."]
+margin_left = 392.214
+margin_top = 51.0
+margin_right = 698.214
+margin_bottom = 91.0
+custom_fonts/font = SubResource( 12 )
+text = "Scegli difficolta'"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="caption_normale" type="Label" parent="."]
 margin_left = 21.054
-margin_top = 132.0
+margin_top = 170.0
 margin_right = 501.054
-margin_bottom = 315.0
+margin_bottom = 353.0
 custom_fonts/font = SubResource( 11 )
 text = "5 Errori disponibili
 
@@ -106,10 +130,10 @@ __meta__ = {
 }
 
 [node name="caption_hardcore" type="Label" parent="."]
-margin_left = 552.541
-margin_top = 132.0
-margin_right = 964.541
-margin_bottom = 315.0
+margin_left = 567.541
+margin_top = 170.0
+margin_right = 979.541
+margin_bottom = 353.0
 custom_fonts/font = SubResource( 11 )
 text = "5 Errori disponibili
 

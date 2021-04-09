@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://images/logo_moccia.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://sounds/sound_correct.wav" type="AudioStream" id=7]
 [ext_resource path="res://images/btn_normal.png" type="Texture" id=8]
 [ext_resource path="res://images/btn_pressed.png" type="Texture" id=9]
+[ext_resource path="res://sounds/error.wav" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 11
@@ -30,15 +31,19 @@ font_data = ExtResource( 5 )
 
 [sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="StyleBoxTexture" id=5]
 texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="StyleBoxTexture" id=6]
 texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="StyleBoxTexture" id=7]
 texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="DynamicFont" id=8]
 size = 20
@@ -541,6 +546,9 @@ __meta__ = {
 
 [node name="sound_correct" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+
+[node name="error" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
 [connection signal="pressed" from="btn_reset" to="." method="_on_btn_reset_pressed"]
 [connection signal="pressed" from="btn_next" to="." method="_on_btn_next_pressed"]
 [connection signal="pressed" from="btn_a" to="." method="_on_btn_a_pressed"]
