@@ -21,7 +21,7 @@ texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 30
+size = 35
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
@@ -40,22 +40,21 @@ region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="StyleBoxTexture" id=9]
 texture = ExtResource( 4 )
-region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="DynamicFont" id=10]
-size = 30
-outline_size = 1
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=12]
-size = 38
+size = 35
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=11]
-size = 26
+size = 38
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 19
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
@@ -70,10 +69,10 @@ z_index = -1
 texture = ExtResource( 2 )
 
 [node name="btn_normal" type="Button" parent="."]
-margin_left = 168.831
-margin_top = 450.0
-margin_right = 333.831
-margin_bottom = 525.899
+margin_left = 160.0
+margin_top = 150.0
+margin_right = 410.0
+margin_bottom = 270.0
 mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
@@ -86,10 +85,10 @@ __meta__ = {
 }
 
 [node name="btn_hardcore" type="Button" parent="."]
-margin_left = 693.795
-margin_top = 449.109
-margin_right = 858.795
-margin_bottom = 523.109
+margin_left = 160.0
+margin_top = 300.0
+margin_right = 410.0
+margin_bottom = 420.0
 mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 6 )
 custom_styles/pressed = SubResource( 7 )
@@ -101,49 +100,77 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="btn_incubo" type="Button" parent="."]
+margin_left = 160.0
+margin_top = 450.0
+margin_right = 410.0
+margin_bottom = 570.0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+text = "Incubo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="titolo" type="Label" parent="."]
 margin_left = 392.214
 margin_top = 51.0
 margin_right = 698.214
 margin_bottom = 91.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 11 )
 text = "Scegli difficolta'"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="caption_normale" type="Label" parent="."]
-margin_left = 21.054
-margin_top = 170.0
-margin_right = 501.054
-margin_bottom = 353.0
-custom_fonts/font = SubResource( 11 )
-text = "5 Errori disponibili
+margin_left = 475.731
+margin_top = 144.703
+margin_right = 941.731
+margin_bottom = 256.703
+custom_fonts/font = SubResource( 12 )
+text = "- 5 errori disponibili per ogni personaggio
+- 1 lettera suggerita per ogni personaggio
+- 120 secondi di tempo per ogni personaggio
 
-Ad ogni personaggio indovinato
-gli errori si resettano
-
-Adatto a chi non e' un vero Ace Gamer"
-align = 1
+Giusto per capire."
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="caption_hardcore" type="Label" parent="."]
-margin_left = 567.541
-margin_top = 170.0
-margin_right = 979.541
-margin_bottom = 353.0
-custom_fonts/font = SubResource( 11 )
-text = "5 Errori disponibili
+margin_left = 477.84
+margin_top = 295.378
+margin_right = 894.84
+margin_bottom = 419.378
+custom_fonts/font = SubResource( 12 )
+text = "- 5 errori disponibili per tutta la partita
+- nessuna lettera suggerita
+- 60 secondi di tempo
 
-Ad ogni personaggio indovinato
-gli errori NON si resettano
+Solo per veri Ace Gamers."
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-Solo per veri Ace Gamers"
-align = 1
+[node name="caption_incubo" type="Label" parent="."]
+margin_left = 479.085
+margin_top = 443.757
+margin_right = 912.085
+margin_bottom = 565.757
+custom_fonts/font = SubResource( 12 )
+text = "- 5 errori disponibili per tutta la partita
+- nessuna lettera suggerita
+- 30 secondi di tempo per ogni personaggio
+
+Non farlo."
 __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="btn_normal" to="." method="_on_btn_normal_pressed"]
 [connection signal="pressed" from="btn_hardcore" to="." method="_on_btn_hardcore_pressed"]
+[connection signal="pressed" from="btn_incubo" to="." method="_on_btn_incubo_pressed"]

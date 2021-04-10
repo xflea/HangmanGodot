@@ -22,3 +22,7 @@ func _on_btn_normal_pressed():
 func _on_btn_hardcore_pressed():
 	GameGlobals.difficulty = "hardcore"
 	get_tree().change_scene("res://Main.tscn")
+
+func _on_btn_incubo_pressed():
+	GameGlobals.difficulty = "nightmare"
+	get_tree().change_scene("res://Main.tscn")

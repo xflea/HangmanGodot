@@ -5,10 +5,13 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
+var scena_main = preload("res://Main.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+#	var n_pool = scena_main.get_node("Main").nomi_da_estrarre
+#	$btn_all_pers.text = String(n_pool)
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

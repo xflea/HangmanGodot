@@ -4,6 +4,8 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
+var timer = 0
+
 var nomi_da_estrarre = ['dario_moccia', 'simone_panetti', 'nannitwitch', 'davide_masella', 'dada', 'agnese_innocente',
 'mangaka96', 'volpescu', 'sdrumox', 'marco_merrino', 'francesco_fossetti', 'sabaku_no_maiku', 'luna', 'ercolino',
 'francesco_cilurzo', 'luis_sal', 'martin_sal', 'cerbero_podcast', 'david_rubino', 'monitor_vanzina', 'il_cippe',
@@ -17,31 +19,42 @@ var errori = 5
 
 var estratta = ""
 var estratta_a_schermo = ""
+var lettera_suggerimento = ""
 
 var gioco_finito = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
+	if GameGlobals.difficulty == 'normal':
+		timer = 120
+	elif GameGlobals.difficulty == 'hardcore':
+		timer = 60
+	elif GameGlobals.difficulty == 'nightmare':
+		timer = 30
+	$Timer.start()
+	
 	if GameGlobals.n_personaggi == null:
 		GameGlobals.n_personaggi = nomi_da_estrarre.size()
 	
 	estratta = estrai(nomi_da_estrarre)
 	
-	#print(estratta)
+	print(estratta)
 	
-	var rng = RandomNumberGenerator.new()
-	rng.randomize()
-	var my_random_number = rng.randf_range(0, lettere_da_indovinare.size())
-	var lettera_suggerimento = lettere_da_indovinare[my_random_number]
-	lettere_da_indovinare.erase(lettera_suggerimento)
-	lettere_indovinate.append(lettera_suggerimento)
-	
-	var btn_da_bloccare = "btn_" + String(lettera_suggerimento)
-	get_node(btn_da_bloccare).disabled = true
+	# se la modalità è normale, estraggo la lettera suggerita
+	if GameGlobals.difficulty == 'normal':
+		var rng = RandomNumberGenerator.new()
+		rng.randomize()
+		var my_random_number = rng.randf_range(0, lettere_da_indovinare.size())
+		lettera_suggerimento = lettere_da_indovinare[my_random_number]
+		lettere_da_indovinare.erase(lettera_suggerimento)
+		lettere_indovinate.append(lettera_suggerimento)
+		
+		var btn_da_bloccare = "btn_" + String(lettera_suggerimento)
+		get_node(btn_da_bloccare).disabled = true
 	
 	for letterina in estratta:
-		if letterina == lettera_suggerimento:
+		if letterina == lettera_suggerimento and GameGlobals.difficulty == "normal":
 			estratta_a_schermo += lettera_suggerimento + " "
 		else:
 			if letterina == "_":
@@ -70,7 +83,10 @@ func estrai(array):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	$label_timer.text = String(timer)
+	
+	if timer == 0:
+		get_tree().change_scene("res://GameOver.tscn")
 
 func controlla_lettera(lettera):
 	estratta_a_schermo = ""
@@ -91,6 +107,7 @@ func controlla_lettera(lettera):
 		get_node("label_da_indovinare").text = estratta_a_schermo
 		
 		if lettere_da_indovinare.empty():
+			$Timer.stop()
 			$sound_correct.play()
 			gioco_finito = true
 			var nome_immagine = "res://images/sol/" + String(self.estratta) + ".png"
@@ -133,6 +150,9 @@ func _on_btn_next_pressed():
 			errori = 5
 		
 		_ready()
+
+func _on_Timer_timeout():
+	timer -= 1
 
 func _on_btn_a_pressed():
 	if !gioco_finito:
@@ -313,3 +333,6 @@ func _on_btn_0_pressed():
 	if !gioco_finito:
 		get_node("btn_0").disabled = true
 		controlla_lettera("0")
+
+func _on_btn_quit_pressed():
+	get_tree().change_scene("res://Menu.tscn")
