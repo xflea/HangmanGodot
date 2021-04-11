@@ -21,7 +21,7 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 50
+size = 37
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
@@ -56,17 +56,22 @@ font_data = ExtResource( 5 )
 
 [sub_resource type="StyleBoxTexture" id=9]
 texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="StyleBoxTexture" id=10]
 texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="StyleBoxTexture" id=11]
 texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="StyleBoxTexture" id=12]
 texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="DynamicFont" id=13]
+size = 12
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
@@ -81,13 +86,13 @@ z_index = -1
 texture = ExtResource( 4 )
 
 [node name="img_impiccato" type="Sprite" parent="."]
-position = Vector2( 60, 60 )
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( 66, 60 )
+scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 2 )
 
 [node name="img_da_indovinare" type="Sprite" parent="."]
-position = Vector2( 530.124, 124.464 )
-scale = Vector2( 0.44, 0.44 )
+position = Vector2( 535.469, 128.028 )
+scale = Vector2( 0.46, 0.46 )
 texture = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -114,10 +119,10 @@ __meta__ = {
 }
 
 [node name="label_errori" type="Label" parent="."]
-margin_left = 106.752
-margin_top = 48.0
-margin_right = 170.752
-margin_bottom = 101.0
+margin_left = 107.0
+margin_top = 44.0
+margin_right = 171.0
+margin_bottom = 89.0
 custom_fonts/font = SubResource( 2 )
 text = "x5"
 align = 1
@@ -127,10 +132,10 @@ __meta__ = {
 }
 
 [node name="label_timer" type="Label" parent="."]
-margin_left = 289.379
-margin_top = 48.0
-margin_right = 358.379
-margin_bottom = 101.0
+margin_left = 101.436
+margin_top = 113.891
+margin_right = 167.436
+margin_bottom = 154.891
 custom_fonts/font = SubResource( 2 )
 text = "000"
 align = 1
@@ -140,12 +145,12 @@ __meta__ = {
 }
 
 [node name="label_pool" type="Label" parent="."]
-margin_left = 368.457
-margin_top = 561.812
-margin_right = 652.457
-margin_bottom = 583.812
+margin_left = 34.0
+margin_top = 567.0
+margin_right = 999.0
+margin_bottom = 589.0
 custom_fonts/font = SubResource( 3 )
-text = "N° di personaggi disponibili: "
+text = "Hai ancora 00 personaggi da indovinare"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -582,10 +587,10 @@ stream = ExtResource( 7 )
 stream = ExtResource( 10 )
 
 [node name="btn_quit" type="Button" parent="."]
-margin_left = 153.695
-margin_top = 128.122
-margin_right = 242.695
-margin_bottom = 173.122
+margin_left = 70.1272
+margin_top = 175.091
+margin_right = 139.127
+margin_bottom = 209.091
 mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 9 )
 custom_styles/pressed = SubResource( 10 )
@@ -600,8 +605,8 @@ __meta__ = {
 [node name="Timer" type="Timer" parent="."]
 
 [node name="clock_sprite" type="Sprite" parent="."]
-position = Vector2( 251.252, 60 )
-scale = Vector2( 0.104, 0.104 )
+position = Vector2( 65.2814, 129.608 )
+scale = Vector2( 0.072, 0.072 )
 texture = ExtResource( 13 )
 [connection signal="pressed" from="btn_reset" to="." method="_on_btn_reset_pressed"]
 [connection signal="pressed" from="btn_next" to="." method="_on_btn_next_pressed"]

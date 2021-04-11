@@ -5,12 +5,9 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-var scena_main = preload("res://Main.tscn")
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-#	var n_pool = scena_main.get_node("Main").nomi_da_estrarre
-#	$btn_all_pers.text = String(n_pool)
+	$btn_all_pers.text = String(GameGlobals.pool_nomi.size()) + " personaggi (MAX)"
 	pass
 
 

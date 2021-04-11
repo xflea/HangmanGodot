@@ -6,11 +6,7 @@ extends Node2D
 
 var timer = 0
 
-var nomi_da_estrarre = ['dario_moccia', 'simone_panetti', 'nannitwitch', 'davide_masella', 'dada', 'agnese_innocente',
-'mangaka96', 'volpescu', 'sdrumox', 'marco_merrino', 'francesco_fossetti', 'sabaku_no_maiku', 'luna', 'ercolino',
-'francesco_cilurzo', 'luis_sal', 'martin_sal', 'cerbero_podcast', 'david_rubino', 'monitor_vanzina', 'il_cippe',
-'aleberi', 'fabrizio_moccia', 'gabro', 'il_masseo', 'kekko', 'matteo_vanelli', 'segatronchi', 'tete', 'venz',
-'victorlaszlo88', 'matteo_riso', 'tomodachi_crew']
+var nomi_da_estrarre = []
 
 var lettere_da_indovinare = []
 var lettere_indovinate = []
@@ -22,9 +18,18 @@ var estratta_a_schermo = ""
 var lettera_suggerimento = ""
 
 var gioco_finito = false
+var is_pool_generata = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	print(GameGlobals.pool_nomi.size())
+	print(nomi_da_estrarre.size())
+	
+	if !is_pool_generata:
+		for nomino in GameGlobals.pool_nomi:
+			nomi_da_estrarre.append(nomino)
+		is_pool_generata = true
 	
 	if GameGlobals.difficulty == 'normal':
 		timer = 120
@@ -67,7 +72,7 @@ func _ready():
 	if GameGlobals.n_personaggi == 1:
 		get_node("label_pool").text = "Ultimo personaggio!"
 	else:
-		get_node("label_pool").text = "N° personaggi da indovinare: " + String(GameGlobals.n_personaggi - 1)
+		get_node("label_pool").text = "Hai ancora " + String(GameGlobals.n_personaggi - 1) + " personaggi da indovinare"
 
 func estrai(array):
 	var rng = RandomNumberGenerator.new()
