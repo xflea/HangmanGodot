@@ -23,9 +23,6 @@ var is_pool_generata = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
-	print(GameGlobals.pool_nomi.size())
-	print(nomi_da_estrarre.size())
-	
 	if !is_pool_generata:
 		for nomino in GameGlobals.pool_nomi:
 			nomi_da_estrarre.append(nomino)
@@ -44,7 +41,10 @@ func _ready():
 	
 	estratta = estrai(nomi_da_estrarre)
 	
-	print(estratta)
+#	print(GameGlobals.pool_nomi.size())
+#	print(nomi_da_estrarre.size())
+#	print(estratta)
+#	print("-----------------------")
 	
 	# se la modalità è normale, estraggo la lettera suggerita
 	if GameGlobals.difficulty == 'normal':
@@ -90,7 +90,7 @@ func estrai(array):
 func _process(delta):
 	$label_timer.text = String(timer)
 	
-	if timer == 0:
+	if timer <= 0:
 		get_tree().change_scene("res://GameOver.tscn")
 
 func controlla_lettera(lettera):
@@ -121,9 +121,10 @@ func controlla_lettera(lettera):
 			get_node("btn_next").visible = true
 			nomi_da_estrarre.erase(estratta)
 			GameGlobals.n_personaggi -= 1
-
 	else:
 		errori -= 1
+		if GameGlobals.difficulty == "nightmare":
+			timer -= 1
 		if errori == 0:
 			get_tree().change_scene("res://GameOver.tscn")
 		get_node("label_errori").text = "x" + String(errori)

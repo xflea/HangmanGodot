@@ -1,7 +1,6 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Mode.gd" type="Script" id=1]
-[ext_resource path="res://images/wall.png" type="Texture" id=2]
 [ext_resource path="res://New Super Mario Font U.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://images/btn_normal.png" type="Texture" id=4]
 [ext_resource path="res://images/btn_pressed.png" type="Texture" id=5]
@@ -40,6 +39,7 @@ region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="StyleBoxTexture" id=9]
 texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 174, 85 )
 
 [sub_resource type="DynamicFont" id=10]
 size = 35
@@ -61,12 +61,6 @@ font_data = ExtResource( 3 )
 
 [node name="Mode" type="Node2D"]
 script = ExtResource( 1 )
-
-[node name="Sfondo" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.784314 )
-position = Vector2( 500, 300 )
-z_index = -1
-texture = ExtResource( 2 )
 
 [node name="btn_normal" type="Button" parent="."]
 margin_left = 160.0
@@ -158,12 +152,13 @@ __meta__ = {
 }
 
 [node name="caption_incubo" type="Label" parent="."]
-margin_left = 479.085
-margin_top = 443.757
-margin_right = 912.085
-margin_bottom = 565.757
+margin_left = 479.0
+margin_top = 444.0
+margin_right = 971.0
+margin_bottom = 579.0
 custom_fonts/font = SubResource( 12 )
 text = "- 5 errori disponibili per tutta la partita
+- ogni errore commesso ti penalizza di 1 secondo
 - nessuna lettera suggerita
 - 30 secondi di tempo per ogni personaggio
 

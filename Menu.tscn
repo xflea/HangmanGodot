@@ -1,7 +1,6 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
-[ext_resource path="res://images/wall.png" type="Texture" id=2]
 [ext_resource path="res://New Super Mario Font U.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://images/logo_moccia.png" type="Texture" id=4]
 [ext_resource path="res://images/btn_normal.png" type="Texture" id=5]
@@ -44,12 +43,6 @@ font_data = ExtResource( 3 )
 [node name="Menu" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Sfondo" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.784314 )
-position = Vector2( 500, 300 )
-z_index = -1
-texture = ExtResource( 2 )
-
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 133, 356.545 )
 rotation = 0.785397
@@ -58,9 +51,9 @@ texture = ExtResource( 4 )
 
 [node name="btn_inizia" type="Button" parent="."]
 margin_left = 668.0
-margin_top = 415.0
+margin_top = 381.0
 margin_right = 844.0
-margin_bottom = 489.0
+margin_bottom = 455.0
 mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
@@ -72,11 +65,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="btn_credits" type="Button" parent="."]
+margin_left = 668.0
+margin_top = 472.0
+margin_right = 844.0
+margin_bottom = 546.0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="titolo" type="Label" parent="."]
-margin_left = 617.577
-margin_top = 66.3251
-margin_right = 917.577
-margin_bottom = 116.325
+margin_left = 610.577
+margin_top = 53.3251
+margin_right = 910.577
+margin_bottom = 103.325
 custom_fonts/font = SubResource( 6 )
 text = "Indovina chi?"
 __meta__ = {
@@ -84,10 +93,10 @@ __meta__ = {
 }
 
 [node name="caption" type="Label" parent="."]
-margin_left = 504.0
-margin_top = 141.0
-margin_right = 1007.0
-margin_bottom = 308.0
+margin_left = 498.0
+margin_top = 134.0
+margin_right = 1001.0
+margin_bottom = 343.0
 custom_fonts/font = SubResource( 6 )
 text = "Riuscirai a indovinare
 tutti i personaggi
@@ -109,3 +118,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="btn_inizia" to="." method="_on_btn_inizia_pressed"]
+[connection signal="pressed" from="btn_credits" to="." method="_on_btn_credits_pressed"]
