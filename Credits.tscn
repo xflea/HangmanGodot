@@ -53,9 +53,9 @@ __meta__ = {
 }
 
 [node name="caption" type="Label" parent="."]
-margin_left = -50.0
+margin_left = -49.0
 margin_top = 21.0
-margin_right = 1073.0
+margin_right = 1074.0
 margin_bottom = 388.0
 custom_fonts/font = SubResource( 6 )
 text = "Programmato da myflea utilizzando Godot & GDScript
@@ -64,6 +64,7 @@ Un grazie anche a:
 bananneale per avermi dato consigli per l'export del progetto
 
 francescamay per avermi dato suggerimenti per la pool di personaggi
+e per avermi fatto da beta-tester
 
 NanniTwitch per avermi fornito il sample audio di \"Rispetto\"
 
