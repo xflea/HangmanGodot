@@ -28,16 +28,13 @@ func _ready():
 			nomi_da_estrarre.append(nomino)
 		is_pool_generata = true
 	
-	if GameGlobals.difficulty == 'normal':
+	if GameGlobals.difficulty == 'Normale':
 		timer = 120
-	elif GameGlobals.difficulty == 'hardcore':
+	elif GameGlobals.difficulty == 'Hardcore':
 		timer = 60
-	elif GameGlobals.difficulty == 'nightmare':
+	elif GameGlobals.difficulty == 'Incubo':
 		timer = 30
 	$Timer.start()
-	
-	if GameGlobals.n_personaggi == null:
-		GameGlobals.n_personaggi = nomi_da_estrarre.size()
 	
 	estratta = estrai(nomi_da_estrarre)
 	
@@ -47,7 +44,7 @@ func _ready():
 #	print("-----------------------")
 	
 	# se la modalità è normale, estraggo la lettera suggerita
-	if GameGlobals.difficulty == 'normal':
+	if GameGlobals.difficulty == 'Normale':
 		var rng = RandomNumberGenerator.new()
 		rng.randomize()
 		var my_random_number = rng.randf_range(0, lettere_da_indovinare.size())
@@ -59,7 +56,7 @@ func _ready():
 		get_node(btn_da_bloccare).disabled = true
 	
 	for letterina in estratta:
-		if letterina == lettera_suggerimento and GameGlobals.difficulty == "normal":
+		if letterina == lettera_suggerimento and GameGlobals.difficulty == "Normale":
 			estratta_a_schermo += lettera_suggerimento + " "
 		else:
 			if letterina == "_":
@@ -123,7 +120,7 @@ func controlla_lettera(lettera):
 			GameGlobals.n_personaggi -= 1
 	else:
 		errori -= 1
-		if GameGlobals.difficulty == "nightmare":
+		if GameGlobals.difficulty == "Incubo":
 			timer -= 1
 		if errori == 0:
 			get_tree().change_scene("res://GameOver.tscn")
@@ -152,7 +149,7 @@ func _on_btn_next_pressed():
 		gioco_finito = false
 		get_node("btn_next").visible = false
 		
-		if GameGlobals.difficulty == "normal":
+		if GameGlobals.difficulty == "Normale":
 			errori = 5
 		
 		_ready()

@@ -49,7 +49,7 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 custom_fonts/font = SubResource( 5 )
-text = "Nuova Partita"
+text = "Torna al menu'"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Finito.gd" type="Script" id=1]
 [ext_resource path="res://sounds/victory.wav" type="AudioStream" id=2]
@@ -29,7 +29,13 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=6]
-size = 44
+size = 70
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 40
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
@@ -48,21 +54,34 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 custom_fonts/font = SubResource( 5 )
-text = "Nuova Partita"
+text = "Torna al menu'"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="caption" type="Label" parent="."]
-margin_left = 120.812
-margin_top = 74.7035
-margin_right = 914.812
-margin_bottom = 267.703
+[node name="label_titolo" type="Label" parent="."]
+margin_left = 36.0
+margin_top = 44.0
+margin_right = 997.0
+margin_bottom = 100.0
 custom_fonts/font = SubResource( 6 )
-text = "Ma sei fortissimo!
-Davvero bravo.
-Tra l'altro con delle palle bellissime, 
-eccezionali veramente, 9/10."
+text = "Congratulazioni!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label_stats" type="Label" parent="."]
+margin_left = 267.654
+margin_top = 174.212
+margin_right = 771.654
+margin_bottom = 217.212
+custom_fonts/font = SubResource( 7 )
+text = "N° personaggi indovinati:
+00
+
+Difficolta':
+bottom text"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false

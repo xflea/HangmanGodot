@@ -8,6 +8,7 @@ extends Node
 var difficulty = ""
 
 var n_personaggi = 0
+var n_personaggi_da_mostrare = 0
 
 var pool_nomi = ['dario_moccia', 'simone_panetti', 'nannitwitch', 'davide_masella', 'dada', 'agnese_innocente',
 'mangaka96', 'volpescu', 'sdrumox', 'marco_merrino', 'francesco_fossetti', 'sabaku_no_maiku', 'luna', 'ercolino',

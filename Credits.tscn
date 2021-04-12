@@ -58,7 +58,7 @@ margin_top = 21.0
 margin_right = 1073.0
 margin_bottom = 388.0
 custom_fonts/font = SubResource( 6 )
-text = "Programmato da @myflea
+text = "Programmato da myflea utilizzando Godot & GDScript
 
 Un grazie anche a:
 bananneale per avermi dato consigli per l'export del progetto

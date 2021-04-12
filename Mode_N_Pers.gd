@@ -17,13 +17,19 @@ func _ready():
 
 
 func _on_btn_10_pers_pressed():
+#	GameGlobals.n_personaggi = 2
+#	GameGlobals.n_personaggi_da_mostrare = 2
 	GameGlobals.n_personaggi = 10
+	GameGlobals.n_personaggi_da_mostrare = 10
 	get_tree().change_scene("res://Mode.tscn")
 
 func _on_btn_20_pers_pressed():
 	GameGlobals.n_personaggi = 20
+	GameGlobals.n_personaggi_da_mostrare = 20
+	
 	get_tree().change_scene("res://Mode.tscn")
 
 func _on_btn_all_pers_pressed():
-	GameGlobals.n_personaggi = null
+	GameGlobals.n_personaggi = GameGlobals.pool_nomi.size()
+	GameGlobals.n_personaggi_da_mostrare = GameGlobals.pool_nomi.size()
 	get_tree().change_scene("res://Mode.tscn")

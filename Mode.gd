@@ -16,13 +16,13 @@ func _ready():
 
 
 func _on_btn_normal_pressed():
-	GameGlobals.difficulty = "normal"
+	GameGlobals.difficulty = "Normale"
 	get_tree().change_scene("res://Main.tscn")
 
 func _on_btn_hardcore_pressed():
-	GameGlobals.difficulty = "hardcore"
+	GameGlobals.difficulty = "Hardcore"
 	get_tree().change_scene("res://Main.tscn")
 
 func _on_btn_incubo_pressed():
-	GameGlobals.difficulty = "nightmare"
+	GameGlobals.difficulty = "Incubo"
 	get_tree().change_scene("res://Main.tscn")
