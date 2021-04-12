@@ -15,4 +15,4 @@ var pool_nomi = ['dario_moccia', 'simone_panetti', 'nannitwitch', 'davide_masell
 'francesco_cilurzo', 'luis_sal', 'martin_sal', 'cerbero_podcast', 'david_rubino', 'monitor_vanzina', 'il_cippe',
 'aleberi', 'fabrizio_moccia', 'gabro', 'il_masseo', 'kekko', 'matteo_vanelli', 'segatronchi', 'tete', 'venz',
 'victorlaszlo88', 'matteo_riso', 'tomodachi_crew', 'il_mastro', 'giorgio_calandrelli', 'marco_mottura', 'il_tizio_qualunque',
-'playerinside', 'kurolily']
+'playerinside', 'kurolily', 'sto_cazzo']
