@@ -60,7 +60,7 @@ func _ready():
 			estratta_a_schermo += lettera_suggerimento + " "
 		else:
 			if letterina == "_":
-				estratta_a_schermo += "    "
+				estratta_a_schermo += "   "
 			else:
 				estratta_a_schermo += "_ "
 	
@@ -102,7 +102,7 @@ func controlla_lettera(lettera):
 				estratta_a_schermo += let + " "
 			else:
 				if let == "_":
-					estratta_a_schermo += "    "
+					estratta_a_schermo += "   "
 				else:
 					estratta_a_schermo += "_ "
 		
