@@ -7,7 +7,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$btn_all_pers.text = String(GameGlobals.pool_nomi.size()) + " personaggi (MAX)"
+	$btn_all_pers.text = String(GameGlobals.pool_nomi.size()) + " chars (MAX)"
 	pass
 
 

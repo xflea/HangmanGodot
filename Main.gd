@@ -67,9 +67,9 @@ func _ready():
 	get_node("label_errori").text = "x" + String(errori)
 	get_node("label_da_indovinare").text = estratta_a_schermo
 	if GameGlobals.n_personaggi == 1:
-		get_node("label_pool").text = "Ultimo personaggio!"
+		get_node("label_pool").text = "Last char!"
 	else:
-		get_node("label_pool").text = "Hai ancora " + String(GameGlobals.n_personaggi - 1) + " personaggi da indovinare"
+		get_node("label_pool").text = "You still have " + String(GameGlobals.n_personaggi - 1) + " char to guess!"
 
 func estrai(array):
 	var rng = RandomNumberGenerator.new()

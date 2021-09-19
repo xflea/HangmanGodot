@@ -45,7 +45,7 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 custom_fonts/font = SubResource( 5 )
-text = "10 personaggi"
+text = "10 chars"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -61,7 +61,7 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 custom_fonts/font = SubResource( 5 )
-text = "20 personaggi"
+text = "20 chars"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -77,18 +77,18 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 custom_fonts/font = SubResource( 5 )
-text = "Tuttih"
+text = "All"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="titolo" type="Label" parent="."]
-margin_left = 92.214
+margin_left = 106.214
 margin_top = 51.0
-margin_right = 946.214
+margin_right = 960.214
 margin_bottom = 91.0
 custom_fonts/font = SubResource( 6 )
-text = "Scegli il numero dei personaggi da indovinare"
+text = "Select the number of character to guess!"
 __meta__ = {
 "_edit_use_anchors_": false
 }

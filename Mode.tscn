@@ -73,7 +73,7 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 custom_fonts/font = SubResource( 5 )
-text = "Normale"
+text = "Normal"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -105,7 +105,7 @@ custom_styles/pressed = SubResource( 7 )
 custom_styles/focus = SubResource( 8 )
 custom_styles/normal = SubResource( 9 )
 custom_fonts/font = SubResource( 10 )
-text = "Incubo"
+text = "Nightmare"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -116,53 +116,53 @@ margin_top = 51.0
 margin_right = 698.214
 margin_bottom = 91.0
 custom_fonts/font = SubResource( 11 )
-text = "Scegli difficolta'"
+text = "Select difficulty"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="caption_normale" type="Label" parent="."]
-margin_left = 475.731
+margin_left = 486.731
 margin_top = 144.703
-margin_right = 941.731
+margin_right = 952.731
 margin_bottom = 256.703
 custom_fonts/font = SubResource( 12 )
-text = "- 5 errori disponibili per ogni personaggio
-- 1 lettera suggerita per ogni personaggio
-- 120 secondi di tempo per ogni personaggio
+text = "- 5 errors for each char
+- 1 hint for each char
+- 120 seconds for each char
 
-Giusto per capire."
+Nice for beginners."
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="caption_hardcore" type="Label" parent="."]
-margin_left = 477.84
+margin_left = 488.84
 margin_top = 295.378
-margin_right = 894.84
+margin_right = 905.84
 margin_bottom = 419.378
 custom_fonts/font = SubResource( 12 )
-text = "- 5 errori disponibili per tutta la partita
-- nessuna lettera suggerita
-- 60 secondi di tempo
+text = "- 5 errors for each game
+- no hints
+- 60 seconds for each char
 
-Solo per veri Ace Gamers."
+Kinda hard, not gonna lie."
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="caption_incubo" type="Label" parent="."]
-margin_left = 479.0
+margin_left = 490.0
 margin_top = 444.0
-margin_right = 971.0
+margin_right = 982.0
 margin_bottom = 579.0
 custom_fonts/font = SubResource( 12 )
-text = "- 5 errori disponibili per tutta la partita
-- ogni errore commesso ti penalizza di 1 secondo
-- nessuna lettera suggerita
-- 30 secondi di tempo per ogni personaggio
+text = "- 5 errors for each game
+- each error gives you 1 sec penalty
+- no hints
+- 30 seconds for each char
 
-Non farlo."
+Don't do it."
 __meta__ = {
 "_edit_use_anchors_": false
 }
